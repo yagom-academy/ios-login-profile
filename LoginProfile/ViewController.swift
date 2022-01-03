@@ -16,10 +16,7 @@ class ViewController: UIViewController {
     }
     
     @objc func emailTextFieldDidChange(_ sender: Any?) {
-        guard let text = emailOrPhoneNumber.text else {
-            return
-        }
-        if text.count < 5 {
+        guard let text = emailOrPhoneNumber.text, text.count >= 5 else {
             loginButton.backgroundColor = .systemGray5
             return
         }
