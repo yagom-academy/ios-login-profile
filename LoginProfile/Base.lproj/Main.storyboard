@@ -32,9 +32,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3H-tN-rOK">
                                 <rect key="frame" x="0.0" y="230.5" width="414" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="이메일 또는 전화번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hZ-6H-kZE">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일 또는 전화번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hZ-6H-kZE">
                                         <rect key="frame" x="16" y="9" width="382" height="18.5"/>
-                                        <color key="textColor" red="0.6666602492" green="0.66666227580000004" blue="0.66666692500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -60,9 +59,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ht-GO-khZ">
                                 <rect key="frame" x="0.0" y="281" width="414" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXY-IZ-GZX">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXY-IZ-GZX">
                                         <rect key="frame" x="16" y="9" width="382" height="18.5"/>
-                                        <color key="textColor" red="0.6666602492" green="0.66666227580000004" blue="0.66666692500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -92,6 +90,9 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="카카오계정 로그인"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iyg-vo-ttC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zH-Nk-g4N">
                                 <rect key="frame" x="16" y="387" width="382" height="31"/>
@@ -133,6 +134,10 @@
                             <constraint firstItem="xQi-69-nnq" firstAttribute="top" secondItem="4zH-Nk-g4N" secondAttribute="bottom" constant="14" id="xUX-ae-o6b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailOrPhoneNumber" destination="1hZ-6H-kZE" id="FRY-JI-WYd"/>
+                        <outlet property="loginButton" destination="sNi-44-KmH" id="7tm-hQ-upR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
