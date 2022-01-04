@@ -23,25 +23,73 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용하던 카카오계정이 있다면" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqk-DG-CbA">
-                                <rect key="frame" x="124" y="112" width="166" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용하던 카카오계정이 있다면 이메일 또는 전화번호로 로그인해 주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqk-DG-CbA">
+                                <rect key="frame" x="94.5" y="112" width="225.5" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일 또는 전화번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfe-cW-eD9">
+                                <rect key="frame" x="16" y="210" width="382" height="22"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpK-5D-YxQ">
+                                <rect key="frame" x="16" y="240" width="382" height="0.5"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="Dcc-IP-csv"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMn-fh-EKz">
+                                <rect key="frame" x="16" y="260.5" width="382" height="22"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sX2-d4-qxL">
+                                <rect key="frame" x="16" y="290.5" width="382" height="0.5"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="a35-Nk-VhN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVQ-zO-uOc">
+                                <rect key="frame" x="16" y="315" width="382" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pSQ-YT-6zx"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="카카오계정 로그인">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCallout"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="VMn-fh-EKz" firstAttribute="top" secondItem="bpK-5D-YxQ" secondAttribute="bottom" constant="20" id="0tE-aP-YnV"/>
+                            <constraint firstItem="dVQ-zO-uOc" firstAttribute="top" secondItem="sX2-d4-qxL" secondAttribute="bottom" constant="24" id="1xV-qh-q9p"/>
+                            <constraint firstItem="sX2-d4-qxL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8kJ-CK-bmc"/>
                             <constraint firstItem="zqk-DG-CbA" firstAttribute="top" secondItem="87q-qg-Fxy" secondAttribute="bottom" constant="11" id="91S-TV-2EQ"/>
+                            <constraint firstItem="sX2-d4-qxL" firstAttribute="top" secondItem="VMn-fh-EKz" secondAttribute="bottom" constant="8" id="CdH-Dm-W0n"/>
                             <constraint firstItem="87q-qg-Fxy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cpp-9c-Rcx"/>
+                            <constraint firstItem="bpK-5D-YxQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IAm-gG-bmW"/>
+                            <constraint firstItem="VMn-fh-EKz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KyI-eo-A2B"/>
+                            <constraint firstItem="bpK-5D-YxQ" firstAttribute="top" secondItem="Lfe-cW-eD9" secondAttribute="bottom" constant="8" id="Nct-ca-6hx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sX2-d4-qxL" secondAttribute="trailing" constant="16" id="SVa-XN-6t0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VMn-fh-EKz" secondAttribute="trailing" constant="16" id="Ykn-JY-kgL"/>
+                            <constraint firstItem="Lfe-cW-eD9" firstAttribute="top" secondItem="zqk-DG-CbA" secondAttribute="bottom" constant="62" id="Yya-o6-arV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lfe-cW-eD9" secondAttribute="trailing" constant="16" id="aqV-Ld-0hU"/>
+                            <constraint firstItem="Lfe-cW-eD9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hma-1O-MxM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dVQ-zO-uOc" secondAttribute="trailing" constant="16" id="kK7-rw-vmN"/>
                             <constraint firstItem="zqk-DG-CbA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kwZ-HQ-LnP"/>
+                            <constraint firstItem="dVQ-zO-uOc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nRQ-Kd-E2H"/>
                             <constraint firstItem="87q-qg-Fxy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="78" id="oXs-Tw-SeB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bpK-5D-YxQ" secondAttribute="trailing" constant="16" id="yct-2u-3Gb"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="instructionLabel" destination="zqk-DG-CbA" id="kmk-x7-3yf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,8 +97,17 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
