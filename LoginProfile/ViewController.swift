@@ -33,13 +33,10 @@ class ViewController: UIViewController {
     }
     
     private func setUI() {
-        idTextField.underline()
-        pwTextField.underline()
+//        idTextField.underline()
+//        pwTextField.underline()
         
         loginButton.titleLabel?.textColor = UIColor.black
-        //loginButton.titleLabel?.text = NSLocalizedString("Log in", comment: "")
-//        loginButton.setTitleColor(UIColor.black, for: .normal)
-//        loginButton.titleLabel?.font = [UIFont systemFontSize: 11]
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -64,7 +61,7 @@ extension UITextField {
         let border = CALayer()
         let width = CGFloat(1.0)
         border.borderColor = UIColor.placeholderText.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height + width, width: self.frame.size.width, height: width)
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
         border.borderWidth = width
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
