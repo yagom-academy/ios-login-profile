@@ -25,15 +25,17 @@ class ViewController: UIViewController {
             inputLength >= 5 {
             loginButton.isEnabled = true
             loginButton.backgroundColor = UIColor(rgb: Constant.yellow)
-        } else {
-            loginButton.isEnabled = false
-            loginButton.backgroundColor = UIColor(rgb: Constant.lightgray)
+            return
         }
+        loginButton.isEnabled = false
+        loginButton.backgroundColor = UIColor(rgb: Constant.lightgray)
+        loginButton.titleLabel?.textColor = UIColor.black
     }
     
     private func setUI() {
         idTextField.underline()
         pwTextField.underline()
+        loginButton.titleLabel?.textColor = UIColor.black
 //        loginButton.setTitleColor(UIColor.black, for: .normal)
 //        loginButton.titleLabel?.font = [UIFont systemFontSize: 11]
     }
@@ -48,9 +50,9 @@ extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == idTextField {
             pwTextField.becomeFirstResponder()
-        } else {
-            pwTextField.resignFirstResponder()
+            return true
         }
+        pwTextField.resignFirstResponder()
         return true
     }
 }
