@@ -14,24 +14,44 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUI()
+        idTextField.delegate = self
+        pwTextField.delegate = self
     }
 
     @IBAction func changedInput(_ sender: UITextField) {
-        if let inputLength = sender.text?.count, inputLength >= 5 {
+        if let inputLength = sender.text?.count,
+            inputLength >= 5 {
             loginButton.isEnabled = true
-            loginButton.backgroundColor = UIColor(rgb: 0xFBE64C)
+            loginButton.backgroundColor = UIColor(rgb: Constant.yellow)
         } else {
             loginButton.isEnabled = false
-            loginButton.backgroundColor = UIColor(rgb: 0xF6F6F6)
+            loginButton.backgroundColor = UIColor(rgb: Constant.lightgray)
         }
     }
     
     private func setUI() {
         idTextField.underline()
         pwTextField.underline()
-//        loginButton.setTitleColor(UIColor.black, for: .disabled)
+//        loginButton.setTitleColor(UIColor.black, for: .normal)
 //        loginButton.titleLabel?.font = [UIFont systemFontSize: 11]
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        idTextField.resignFirstResponder()
+        pwTextField.resignFirstResponder()
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == idTextField {
+            pwTextField.becomeFirstResponder()
+        } else {
+            pwTextField.resignFirstResponder()
+        }
+        return true
     }
 }
 
@@ -40,7 +60,7 @@ extension UITextField {
         let border = CALayer()
         let width = CGFloat(1.0)
         border.borderColor = UIColor.placeholderText.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height + width, width: self.frame.size.width, height: 1)
+        border.frame = CGRect(x: 0, y: self.frame.size.height + width, width: self.frame.size.width, height: width)
         border.borderWidth = width
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
