@@ -14,27 +14,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUI()
     }
 
     @IBAction func changedInput(_ sender: UITextField) {
-        print("test")
-        let inputLength = sender.text?.count
-        print(inputLength)
-        if let inputLength = inputLength, inputLength >= 5 {
-            print("input changed")
+        if let inputLength = sender.text?.count, inputLength >= 5 {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = UIColor(rgb: 0xFBE64C)
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = UIColor(rgb: 0xF6F6F6)
         }
     }
     
     private func setUI() {
-        idTextField.underlined()
-        pwTextField.underlined()
+        idTextField.underline()
+        pwTextField.underline()
+        loginButton.setTitleColor(UIColor.black, for: .disabled)
     }
 }
 
 extension UITextField {
-    func underlined() {
+    func underline() {
         let border = CALayer()
         let width = CGFloat(1.0)
         border.borderColor = UIColor.placeholderText.cgColor
@@ -42,5 +43,24 @@ extension UITextField {
         border.borderWidth = width
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
+    }
+}
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int, alpha: Int = 0xFF) {
+        self.init(
+            red: CGFloat(red) / 255.0,
+            green: CGFloat(green) / 255.0,
+            blue: CGFloat(blue) / 255.0,
+            alpha: CGFloat(alpha) / 255.0
+        )
+    }
+
+    convenience init(rgb: Int) {
+        self.init(
+           red: (rgb >> 16) & 0xFF,
+           green: (rgb >> 8) & 0xFF,
+           blue: rgb & 0xFF
+        )
     }
 }
