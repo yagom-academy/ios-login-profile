@@ -7,8 +7,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var emailOrPhoneNumber: UITextField!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var emailOrPhoneNumber: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.emailOrPhoneNumber.addTarget(self, action: #selector(emailTextFieldDidChange(_:)), for: .editingChanged)
