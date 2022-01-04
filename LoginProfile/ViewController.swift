@@ -16,10 +16,7 @@ class ViewController: UIViewController {
     
     var validateResults: [Bool] = [false, false] {
         didSet(results) {
-            var isEnabled = true
-            for isValidate in results {
-                isEnabled = isEnabled && isValidate
-            }
+            let isEnabled = results.reduce(true) { $0 && $1 }
             self.toggleLoginButtonEnabled(isEnabled)
         }
     }
@@ -73,7 +70,14 @@ class ViewController: UIViewController {
 
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        switch textField {
+        case emailTextField:
+            pwTextField.becomeFirstResponder()
+        case pwTextField:
+            textField.resignFirstResponder()
+        default:
+            break
+        }
         return true
     }
 }
