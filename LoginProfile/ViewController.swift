@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         pwTextField.delegate = self
     }
 
-    @IBAction func changedInput(_ sender: UITextField) {
+    @IBAction func receiveInput(_ sender: UITextField) {
         if let inputLength = sender.text?.count,
             inputLength >= 5 {
             loginButton.isEnabled = true

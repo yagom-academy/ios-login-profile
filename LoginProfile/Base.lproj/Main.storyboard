@@ -44,7 +44,7 @@ log in with your email or phone number.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="changedInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="i1W-ih-DYy"/>
+                                                    <action selector="receiveInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="gkc-Y5-fk8"/>
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eg1-Ci-KB0" userLabel="underlineIdTextField">
