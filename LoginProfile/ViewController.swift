@@ -7,7 +7,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
@@ -61,7 +60,12 @@ extension UITextField {
         let border = CALayer()
         let width = CGFloat(1.0)
         border.borderColor = UIColor.placeholderText.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
+        border.frame = CGRect(
+            x: 0,
+            y: self.frame.size.height - width,
+            width: self.frame.size.width,
+            height: width
+        )
         border.borderWidth = width
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
