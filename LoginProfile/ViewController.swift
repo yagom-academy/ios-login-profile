@@ -17,10 +17,20 @@ class ViewController: UIViewController {
     
     @objc func emailTextFieldDidChange(_ sender: Any?) {
         guard let text = emailOrPhoneNumber.text, text.count >= 5 else {
-            loginButton.backgroundColor = .systemGray5
+            deactivateButton()
             return
         }
+        activateButton()
+    }
+    
+    func activateButton() {
         loginButton.backgroundColor = .systemYellow
+        self.loginButton.isEnabled = true
+    }
+    
+    func deactivateButton() {
+        loginButton.backgroundColor = .systemGray5
+        self.loginButton.isEnabled = false
     }
 }
 
