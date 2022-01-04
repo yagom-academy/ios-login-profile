@@ -6,7 +6,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailOrPhoneNumber: UITextField!
     override func viewDidLoad() {
@@ -15,22 +15,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @objc func emailTextFieldDidChange(_ sender: Any?) {
-        guard let text = emailOrPhoneNumber.text, text.count >= 5 else {
-            deactivateButton()
+    @objc
+    func emailTextFieldDidChange(_ sender: UITextField?) {
+        guard let text = sender?.text, text.count >= 5 else {
+            activateButton(false)
             return
         }
-        activateButton()
+        activateButton(true)
     }
     
-    func activateButton() {
-        loginButton.backgroundColor = .systemYellow
-        self.loginButton.isEnabled = true
-    }
-    
-    func deactivateButton() {
-        loginButton.backgroundColor = .systemGray5
-        self.loginButton.isEnabled = false
+    func activateButton(_ bool: Bool) {
+        loginButton.backgroundColor = bool ? .systemYellow : .systemGray5
+        self.loginButton.isEnabled = bool
     }
 }
 
