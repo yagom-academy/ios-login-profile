@@ -1,0 +1,21 @@
+
+/* Class = "UITextField"; placeholder = "이메일 또는 전화번호"; ObjectID = "1hZ-6H-kZE"; */
+"1hZ-6H-kZE.placeholder" = "이메일 또는 전화번호";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4zH-Nk-g4N"; */
+"4zH-Nk-g4N.normalTitle" = "새로운 카카오계정 만들기";
+
+/* Class = "UILabel"; text = "사용하던 카카오계정이 있다면 이메일 또는 전화번호로 로그인해주세요"; ObjectID = "CL6-aE-WS3"; */
+"CL6-aE-WS3.text" = "사용하던 카카오계정이 있다면 이메일 또는 전화번호로 로그인해주세요";
+
+/* Class = "UITextField"; placeholder = "비밀번호"; ObjectID = "fXY-IZ-GZX"; */
+"fXY-IZ-GZX.placeholder" = "비밀번호";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sNi-44-KmH"; */
+"sNi-44-KmH.normalTitle" = "카카오계정 로그인";
+
+/* Class = "UILabel"; text = "카카오톡을 시작합니다"; ObjectID = "vKp-oz-HB6"; */
+"vKp-oz-HB6.text" = "카카오톡을 시작합니다";
+
+/* Class = "UILabel"; text = "카카오계정 또는 비밀번호 찾기"; ObjectID = "xQi-69-nnq"; */
+"xQi-69-nnq.text" = "카카오계정 또는 비밀번호 찾기";
