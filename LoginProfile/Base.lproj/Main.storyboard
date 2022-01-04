@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,25 +13,17 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaY-Vk-H4c">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAk-O0-CtQ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eg1-Ci-KB0">
-                                                <rect key="frame" x="16" y="223" width="382" height="0.5"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="0.5" id="IUF-oY-xHQ"/>
-                                                </constraints>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to KakaoTalk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXN-c5-Cw3" userLabel="loginTitle">
                                                 <rect key="frame" x="16" y="78" width="382" height="23"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
@@ -48,55 +40,62 @@ log in with your email or phone number.</string>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or phone number" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fux-A1-JCb" userLabel="idTextField">
                                                 <rect key="frame" x="16" y="201" width="382" height="22"/>
-                                                <color key="textColor" name="lightgrey_30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <action selector="changedInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="i1W-ih-DYy"/>
                                                 </connections>
                                             </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eg1-Ci-KB0" userLabel="underlineIdTextField">
+                                                <rect key="frame" x="16" y="223" width="382" height="0.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="0.5" id="IUF-oY-xHQ"/>
+                                                </constraints>
+                                            </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rq7-tx-43D" userLabel="pwTextField">
-                                                <rect key="frame" x="16" y="233.5" width="382" height="22"/>
-                                                <color key="textColor" name="lightgrey_30"/>
+                                                <rect key="frame" x="16" y="233.5" width="382" height="21"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-QW-R6O" userLabel="underlinePwTextField">
+                                                <rect key="frame" x="16" y="254.5" width="382" height="0.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="0.5" id="jVk-ip-UOq"/>
+                                                </constraints>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFc-p9-AV6" userLabel="loginButton">
-                                                <rect key="frame" x="16" y="276" width="382" height="31"/>
+                                                <rect key="frame" x="16" y="279" width="382" height="31"/>
                                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log in"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQh-1r-Q0I" userLabel="signUpButton">
-                                                <rect key="frame" x="16" y="317" width="382" height="31"/>
+                                                <rect key="frame" x="16" y="321" width="382" height="31"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcw-du-X9X" userLabel="findButton">
-                                                <rect key="frame" x="16" y="358" width="382" height="31"/>
+                                                <rect key="frame" x="16" y="366" width="382" height="31"/>
                                                 <color key="tintColor" name="darkgrey"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Find Kakao Account or Password"/>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-QW-R6O">
-                                                <rect key="frame" x="16" y="255.5" width="382" height="0.5"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="0.5" id="jVk-ip-UOq"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Ghc-QW-R6O" firstAttribute="leading" secondItem="pXN-c5-Cw3" secondAttribute="leading" id="1qf-Pr-Uvb"/>
-                                            <constraint firstItem="JFc-p9-AV6" firstAttribute="top" secondItem="Ghc-QW-R6O" secondAttribute="bottom" constant="20" id="7NP-IK-xMR"/>
+                                            <constraint firstItem="JFc-p9-AV6" firstAttribute="top" secondItem="Ghc-QW-R6O" secondAttribute="bottom" constant="24" id="7NP-IK-xMR"/>
                                             <constraint firstItem="fux-A1-JCb" firstAttribute="top" secondItem="vSV-Av-64b" secondAttribute="bottom" constant="53" id="8kK-pU-F8G"/>
                                             <constraint firstItem="vSV-Av-64b" firstAttribute="leading" secondItem="pXN-c5-Cw3" secondAttribute="leading" id="Esl-mf-04q"/>
-                                            <constraint firstItem="NQh-1r-Q0I" firstAttribute="top" secondItem="JFc-p9-AV6" secondAttribute="bottom" constant="10" id="FEc-Fh-hrc"/>
-                                            <constraint firstItem="tcw-du-X9X" firstAttribute="top" secondItem="NQh-1r-Q0I" secondAttribute="bottom" constant="10" id="Gdo-Ud-gQZ"/>
+                                            <constraint firstItem="NQh-1r-Q0I" firstAttribute="top" secondItem="JFc-p9-AV6" secondAttribute="bottom" constant="11" id="FEc-Fh-hrc"/>
+                                            <constraint firstItem="tcw-du-X9X" firstAttribute="top" secondItem="NQh-1r-Q0I" secondAttribute="bottom" constant="14" id="Gdo-Ud-gQZ"/>
                                             <constraint firstItem="pXN-c5-Cw3" firstAttribute="top" secondItem="TAk-O0-CtQ" secondAttribute="top" constant="78" id="HrY-El-hX5"/>
                                             <constraint firstItem="NQh-1r-Q0I" firstAttribute="leading" secondItem="pXN-c5-Cw3" secondAttribute="leading" id="I7Q-na-mz0"/>
                                             <constraint firstItem="fux-A1-JCb" firstAttribute="leading" secondItem="pXN-c5-Cw3" secondAttribute="leading" id="M4X-B6-x3j"/>
@@ -134,10 +133,10 @@ log in with your email or phone number.</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="xaY-Vk-H4c" secondAttribute="bottom" id="Afr-Js-ld2"/>
-                            <constraint firstItem="xaY-Vk-H4c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FY8-WK-ALv"/>
-                            <constraint firstAttribute="trailing" secondItem="xaY-Vk-H4c" secondAttribute="trailing" id="LtY-gD-lNq"/>
-                            <constraint firstItem="xaY-Vk-H4c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sri-hp-t44"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xaY-Vk-H4c" secondAttribute="bottom" id="Afr-Js-ld2"/>
+                            <constraint firstItem="xaY-Vk-H4c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FY8-WK-ALv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xaY-Vk-H4c" secondAttribute="trailing" id="LtY-gD-lNq"/>
+                            <constraint firstItem="xaY-Vk-H4c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sri-hp-t44"/>
                         </constraints>
                     </view>
                     <connections>
@@ -146,19 +145,17 @@ log in with your email or phone number.</string>
                         <outlet property="pwTextField" destination="Rq7-tx-43D" id="yLg-R1-X6O"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="138.61607142857142"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="darkgrey">
-            <color red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="lightgrey_30">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.33700001239776611" green="0.33700001239776611" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lightgrey_60">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23499999940395355" green="0.23499999940395355" blue="0.2630000114440918" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
