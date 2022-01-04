@@ -35,7 +35,9 @@ class ViewController: UIViewController {
     private func setUI() {
         idTextField.underline()
         pwTextField.underline()
+        
         loginButton.titleLabel?.textColor = UIColor.black
+        //loginButton.titleLabel?.text = NSLocalizedString("Log in", comment: "")
 //        loginButton.setTitleColor(UIColor.black, for: .normal)
 //        loginButton.titleLabel?.font = [UIFont systemFontSize: 11]
     }

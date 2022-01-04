@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; configuration.title = "Log in"; ObjectID = "JFc-p9-AV6"; */
+"JFc-p9-AV6.configuration.title" = "Log in";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JFc-p9-AV6"; */
+"JFc-p9-AV6.normalTitle" = "Log in";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "NQh-1r-Q0I"; */
+"NQh-1r-Q0I.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NQh-1r-Q0I"; */
+"NQh-1r-Q0I.normalTitle" = "Sign Up";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Rq7-tx-43D"; */
+"Rq7-tx-43D.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Email or phone number"; ObjectID = "fux-A1-JCb"; */
+"fux-A1-JCb.placeholder" = "Email or phone number";
+
+/* Class = "UILabel"; text = "Welcome to KakaoTalk"; ObjectID = "pXN-c5-Cw3"; */
+"pXN-c5-Cw3.text" = "Welcome to KakaoTalk";
+
+/* Class = "UIButton"; configuration.title = "Find Kakao Account or Password"; ObjectID = "tcw-du-X9X"; */
+"tcw-du-X9X.configuration.title" = "Find Kakao Account or Password";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tcw-du-X9X"; */
+"tcw-du-X9X.normalTitle" = "Find Kakao Account or Password";
+
+/* Class = "UILabel"; text = "If you have a Kakao Account,\nlog in with your email or phone number."; ObjectID = "vSV-Av-64b"; */
+"vSV-Av-64b.text" = "If you have a Kakao Account,\nlog in with your email or phone number.";

@@ -3,13 +3,13 @@
 "JFc-p9-AV6.configuration.title" = "카카오계정 로그인";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JFc-p9-AV6"; */
-"JFc-p9-AV6.normalTitle" = "Button";
+"JFc-p9-AV6.normalTitle" = "카카오계정 로그인";
 
 /* Class = "UIButton"; configuration.title = "새로운 카카오계정 만들기"; ObjectID = "NQh-1r-Q0I"; */
 "NQh-1r-Q0I.configuration.title" = "새로운 카카오계정 만들기";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NQh-1r-Q0I"; */
-"NQh-1r-Q0I.normalTitle" = "Button";
+"NQh-1r-Q0I.normalTitle" = "새로운 카카오계정 만들기";
 
 /* Class = "UITextField"; placeholder = "비밀번호"; ObjectID = "Rq7-tx-43D"; */
 "Rq7-tx-43D.placeholder" = "비밀번호";
@@ -24,7 +24,7 @@
 "tcw-du-X9X.configuration.title" = "카카오계정 또는 비밀번호 찾기";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tcw-du-X9X"; */
-//"tcw-du-X9X.normalTitle" = "Button";
+"tcw-du-X9X.normalTitle" = "카카오계정 또는 비밀번호 찾기";
 
 /* Class = "UILabel"; text = "사용하던 카카오계정이 있다면\n이메일 또는 전화번호로 로그인해 주세요."; ObjectID = "vSV-Av-64b"; */
 "vSV-Av-64b.text" = "사용하던 카카오계정이 있다면\n이메일 또는 전화번호로 로그인해 주세요.";
