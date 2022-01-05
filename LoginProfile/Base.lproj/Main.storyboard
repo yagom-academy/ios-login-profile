@@ -66,6 +66,9 @@
                                 <state key="disabled">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="sxd-Xs-5Zr" kind="presentation" modalPresentationStyle="fullScreen" id="hEv-B4-BUp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NJ-ey-Ot7">
                                 <rect key="frame" x="16" y="370.5" width="382" height="44.5"/>
@@ -124,6 +127,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="7gV-i5-gCj">
+            <objects>
+                <viewController id="sxd-Xs-5Zr" customClass="ProfileViewController" customModule="LoginProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pxx-Gw-Lb2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lCG-aa-LmU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Y0-8t-il7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4H-Gk-Zls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="110"/>
         </scene>
     </scenes>
     <resources>
