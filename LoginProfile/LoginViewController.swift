@@ -1,9 +1,3 @@
-//
-//  LoginProfile - ViewController.swift
-//  Created by yagom. 
-//  Copyright © yagom. All rights reserved.
-// 
-
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -12,7 +6,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.emailOrPhoneNumber.addTarget(self, action: #selector(emailTextFieldDidChange(_:)), for: .editingChanged)
-        // Do any additional setup after loading the view.
     }
     
     @objc
