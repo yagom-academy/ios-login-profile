@@ -57,7 +57,7 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
-
+/*
 extension UITextField {
     func underline() {
         let border = CALayer()
@@ -74,7 +74,7 @@ extension UITextField {
         self.layer.masksToBounds = true
     }
 }
-
+*/
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int, alpha: Int = 0xFF) {
         self.init(
