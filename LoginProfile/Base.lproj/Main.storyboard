@@ -73,9 +73,6 @@ log in with your email or phone number.</string>
                                                 <color key="tintColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log in"/>
-                                                <connections>
-                                                    <action selector="testPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yll-ob-9zJ"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQh-1r-Q0I" userLabel="signUpButton">
                                                 <rect key="frame" x="16" y="321" width="382" height="31"/>
@@ -146,7 +143,7 @@ log in with your email or phone number.</string>
                         <outlet property="idTextField" destination="fux-A1-JCb" id="0Gh-mt-WIU"/>
                         <outlet property="loginButton" destination="JFc-p9-AV6" id="G9e-xi-mJn"/>
                         <outlet property="loginScrollView" destination="xaY-Vk-H4c" id="z7s-Ce-Giw"/>
-                        <outlet property="pwTextField" destination="Rq7-tx-43D" id="yLg-R1-X6O"/>
+                        <outlet property="passwordTextField" destination="Rq7-tx-43D" id="yLg-R1-X6O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

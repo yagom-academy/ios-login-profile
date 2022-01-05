@@ -10,14 +10,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginScrollView: UIScrollView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var idTextField: UITextField!
-    @IBOutlet weak var pwTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
         idTextField.delegate = self
-        pwTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
     @IBAction func receiveInput(_ sender: UITextField) {
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     
     private func setUI() {
 //        idTextField.underline()
-//        pwTextField.underline()
+//        passwordTextField.underline()
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(loginScreenTap))
         loginScrollView.addGestureRecognizer(tapGestureRecognizer)
@@ -50,10 +50,10 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == idTextField {
-            pwTextField.becomeFirstResponder()
+            passwordTextField.becomeFirstResponder()
             return true
         }
-        pwTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         return true
     }
 }
