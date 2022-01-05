@@ -12,6 +12,7 @@ protocol Configurable {
 }
 
 class BaseStackView: UIStackView, Configurable {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
 

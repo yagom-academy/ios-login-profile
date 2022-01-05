@@ -7,6 +7,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var loginScrollView: UIScrollView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var idTextField: UITextField!
@@ -24,11 +25,13 @@ class ViewController: UIViewController {
         guard let input = sender.text else {
             return
         }
+        
         if input.count >= Constant.validInputLength {
             loginButton.isEnabled = true
         } else {
             loginButton.isEnabled = false
         }
+        
         changeLoginButtonStyle(loginButton.isEnabled)
     }
     
