@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EA788DF2785A97800064B4C /* ProfileBottomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA788DE2785A97800064B4C /* ProfileBottomMenu.swift */; };
+		6EA788E12785AE7800064B4C /* BaseStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA788E02785AE7800064B4C /* BaseStackView.swift */; };
+		6EA788E32785CF3D00064B4C /* ProfileBottomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA788E22785CF3D00064B4C /* ProfileBottomMenuBar.swift */; };
 		6EEACC732783EAC4001E3679 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EEACC752783EAC4001E3679 /* Localization.strings */; };
 		C23B420E278576820055BDF2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23B420D278576820055BDF2 /* ProfileViewController.swift */; };
 		C23B42122785950B0055BDF2 /* AutuLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23B42112785950B0055BDF2 /* AutuLayoutView.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EA788DE2785A97800064B4C /* ProfileBottomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBottomMenu.swift; sourceTree = "<group>"; };
+		6EA788E02785AE7800064B4C /* BaseStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStackView.swift; sourceTree = "<group>"; };
+		6EA788E22785CF3D00064B4C /* ProfileBottomMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBottomMenuBar.swift; sourceTree = "<group>"; };
 		6EEACC742783EAC4001E3679 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 		6EEACC762783EB64001E3679 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		6EEACC772783EB64001E3679 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -59,6 +65,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EA788DB2785A8FB00064B4C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C2900D372783E1AE00088596 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6EA788DC2785A92E00064B4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7D7D7A8276783B200F01B39 /* CloseButton.swift */,
+				C7D7D7AC276783B200F01B39 /* CircleButton.swift */,
+				C7D7D7AB276783B200F01B39 /* FavouriteButton.swift */,
+				C7D7D7A9276783B200F01B39 /* GiftButton.swift */,
+				C7D7D7AA276783B200F01B39 /* WonButton.swift */,
+				6EA788E02785AE7800064B4C /* BaseStackView.swift */,
+				6EA788DE2785A97800064B4C /* ProfileBottomMenu.swift */,
+				6EA788E22785CF3D00064B4C /* ProfileBottomMenuBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6EA788DD2785A94300064B4C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7D7D7982767836100F01B39 /* ViewController.swift */,
+				C23B420D278576820055BDF2 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C7D7D7882767836100F01B39 = {
 			isa = PBXGroup;
 			children = (
@@ -78,21 +116,16 @@
 		C7D7D7932767836100F01B39 /* LoginProfile */ = {
 			isa = PBXGroup;
 			children = (
+				6EA788DD2785A94300064B4C /* ViewControllers */,
+				6EA788DC2785A92E00064B4C /* Views */,
+				6EA788DB2785A8FB00064B4C /* Common */,
 				C7D7D7942767836100F01B39 /* AppDelegate.swift */,
 				C7D7D7962767836100F01B39 /* SceneDelegate.swift */,
-				C7D7D7982767836100F01B39 /* ViewController.swift */,
-				C7D7D7A8276783B200F01B39 /* CloseButton.swift */,
-				C7D7D7AC276783B200F01B39 /* CircleButton.swift */,
-				C7D7D7AB276783B200F01B39 /* FavouriteButton.swift */,
-				C7D7D7A9276783B200F01B39 /* GiftButton.swift */,
-				C7D7D7AA276783B200F01B39 /* WonButton.swift */,
 				C7D7D79A2767836100F01B39 /* Main.storyboard */,
 				C7D7D79D2767836200F01B39 /* Assets.xcassets */,
 				C7D7D79F2767836200F01B39 /* LaunchScreen.storyboard */,
 				C7D7D7A22767836200F01B39 /* Info.plist */,
-				C2900D372783E1AE00088596 /* Constants.swift */,
 				6EEACC752783EAC4001E3679 /* Localization.strings */,
-				C23B420D278576820055BDF2 /* ProfileViewController.swift */,
 				C23B42112785950B0055BDF2 /* AutuLayoutView.swift */,
 			);
 			path = LoginProfile;
@@ -171,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA788E32785CF3D00064B4C /* ProfileBottomMenuBar.swift in Sources */,
 				C7D7D7992767836100F01B39 /* ViewController.swift in Sources */,
 				C7D7D7952767836100F01B39 /* AppDelegate.swift in Sources */,
 				C23B420E278576820055BDF2 /* ProfileViewController.swift in Sources */,
@@ -180,8 +214,10 @@
 				C7D7D7972767836100F01B39 /* SceneDelegate.swift in Sources */,
 				C7D7D7AF276783B200F01B39 /* WonButton.swift in Sources */,
 				C7D7D7AE276783B200F01B39 /* GiftButton.swift in Sources */,
+				6EA788DF2785A97800064B4C /* ProfileBottomMenu.swift in Sources */,
 				C2900D382783E1AE00088596 /* Constants.swift in Sources */,
 				C23B42122785950B0055BDF2 /* AutuLayoutView.swift in Sources */,
+				6EA788E12785AE7800064B4C /* BaseStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
