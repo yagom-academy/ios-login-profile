@@ -575,3 +575,4 @@ excluded:
     - LoginProfile/CircleButton.swift
     - LoginProfile/GiftButton.swift
     - LoginProfile/WonButton.swift
+    - LoginProfile/ProfileView.swift

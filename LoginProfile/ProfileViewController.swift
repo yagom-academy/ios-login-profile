@@ -1,10 +1,8 @@
 import UIKit
 
-class ProfileViewController: UIViewController {
-    private var backgroundImage: UIImage? = UIImage(named: "sky")
-    private var profileImage: UIImage? = UIImage(named: "penguine")
-    
+class ProfileViewController: UIViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view = ProfileView()
     }
 }
