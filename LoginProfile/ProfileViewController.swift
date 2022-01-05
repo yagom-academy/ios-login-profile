@@ -6,8 +6,5 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let profileImage = profileImage {
-            view.addSubview(profileImage)
-        }
     }
 }
