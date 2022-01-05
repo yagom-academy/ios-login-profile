@@ -17,9 +17,9 @@ class LoginViewController: UIViewController {
         activateButton(true)
     }
     
-    func activateButton(_ bool: Bool) {
-        loginButton.backgroundColor = bool ? .systemYellow : .systemGray5
-        self.loginButton.isEnabled = bool
+    func activateButton(_ isActive: Bool) {
+        loginButton.backgroundColor = isActive ? .systemYellow : .systemGray5
+        self.loginButton.isEnabled = isActive
     }
 }
 
