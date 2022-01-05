@@ -46,7 +46,7 @@
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wxv-6y-7yQ" userLabel="PwTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wxv-6y-7yQ" userLabel="PasswordTextField">
                                                 <rect key="frame" x="16" y="260" width="342" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="p7i-OS-cIo"/>
@@ -100,7 +100,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oQx-cA-e2h" secondAttribute="bottom" constant="346" id="1tb-C5-mEd"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oQx-cA-e2h" secondAttribute="bottom" priority="250" constant="346" id="1tb-C5-mEd"/>
                                             <constraint firstAttribute="trailing" secondItem="2IN-MI-7hn" secondAttribute="trailing" constant="16" id="1w5-Y1-Iyf"/>
                                             <constraint firstItem="ATG-J5-aEu" firstAttribute="trailing" secondItem="Wxv-6y-7yQ" secondAttribute="trailing" id="5Vp-p0-869"/>
                                             <constraint firstItem="JfP-Mq-AGa" firstAttribute="trailing" secondItem="Wxv-6y-7yQ" secondAttribute="trailing" id="5W0-mE-TA5"/>
@@ -135,7 +135,7 @@
                                     <constraint firstItem="jfE-hQ-Xea" firstAttribute="top" secondItem="kKc-2q-VkB" secondAttribute="top" id="3aP-JR-OJg"/>
                                     <constraint firstAttribute="bottom" secondItem="jfE-hQ-Xea" secondAttribute="bottom" id="Dkp-9g-gcT"/>
                                     <constraint firstAttribute="trailing" secondItem="jfE-hQ-Xea" secondAttribute="trailing" id="DuU-5c-pqe"/>
-                                    <constraint firstItem="jfE-hQ-Xea" firstAttribute="height" secondItem="zjV-co-ihT" secondAttribute="height" priority="250" id="E1I-ej-NZq"/>
+                                    <constraint firstItem="jfE-hQ-Xea" firstAttribute="height" secondItem="zjV-co-ihT" secondAttribute="height" priority="1" id="E1I-ej-NZq"/>
                                     <constraint firstItem="jfE-hQ-Xea" firstAttribute="leading" secondItem="kKc-2q-VkB" secondAttribute="leading" id="YVN-vo-b20"/>
                                     <constraint firstItem="jfE-hQ-Xea" firstAttribute="width" secondItem="kKc-2q-VkB" secondAttribute="width" id="bpd-mO-WQ8"/>
                                 </constraints>
@@ -153,10 +153,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="Z5C-Gj-Xh7" id="nhW-on-e96"/>
+                        <outlet property="emailOrPhoneNumberTextField" destination="Z5C-Gj-Xh7" id="nhW-on-e96"/>
                         <outlet property="loginButton" destination="JfP-Mq-AGa" id="Lpo-WB-iMH"/>
-                        <outlet property="pwTextField" destination="Wxv-6y-7yQ" id="YWg-BM-ANU"/>
+                        <outlet property="passwordTextField" destination="Wxv-6y-7yQ" id="YWg-BM-ANU"/>
                         <outlet property="scrollView" destination="kKc-2q-VkB" id="VaA-u7-6YZ"/>
+                        <outletCollection property="dynamicTypeButtons" destination="JfP-Mq-AGa" collectionClass="NSMutableArray" id="NxB-U5-Ca8"/>
+                        <outletCollection property="dynamicTypeButtons" destination="ATG-J5-aEu" collectionClass="NSMutableArray" id="NA0-ug-cgt"/>
+                        <outletCollection property="dynamicTypeButtons" destination="oQx-cA-e2h" collectionClass="NSMutableArray" id="vgt-oJ-Fum"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -175,7 +178,7 @@
             <color red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LabelLightGrayColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2136D3F27840D7600C25400 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2136D3E27840D7600C25400 /* Color+Extension.swift */; };
+		C2136D3F27840D7600C25400 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2136D3E27840D7600C25400 /* UIColor+Extension.swift */; };
 		C7D7D7952767836100F01B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7942767836100F01B39 /* AppDelegate.swift */; };
 		C7D7D7972767836100F01B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7962767836100F01B39 /* SceneDelegate.swift */; };
 		C7D7D7992767836100F01B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7982767836100F01B39 /* ViewController.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C2136D3E27840D7600C25400 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		C2136D3E27840D7600C25400 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C234B05D27843533005B9C8A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		C234B05E27843533005B9C8A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C234B0602784355C005B9C8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 				C7D7D7AB276783B200F01B39 /* FavouriteButton.swift */,
 				C7D7D7A9276783B200F01B39 /* GiftButton.swift */,
 				C7D7D7AA276783B200F01B39 /* WonButton.swift */,
-				C2136D3E27840D7600C25400 /* Color+Extension.swift */,
+				C2136D3E27840D7600C25400 /* UIColor+Extension.swift */,
 				C7D7D79A2767836100F01B39 /* Main.storyboard */,
 				C7D7D79D2767836200F01B39 /* Assets.xcassets */,
 				C7D7D79F2767836200F01B39 /* LaunchScreen.storyboard */,
@@ -161,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7D7D7992767836100F01B39 /* ViewController.swift in Sources */,
-				C2136D3F27840D7600C25400 /* Color+Extension.swift in Sources */,
+				C2136D3F27840D7600C25400 /* UIColor+Extension.swift in Sources */,
 				C7D7D7952767836100F01B39 /* AppDelegate.swift in Sources */,
 				C7D7D7B0276783B200F01B39 /* FavouriteButton.swift in Sources */,
 				C7D7D7B1276783B200F01B39 /* CircleButton.swift in Sources */,
