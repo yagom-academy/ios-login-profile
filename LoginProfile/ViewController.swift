@@ -7,6 +7,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var loginScrollView: UIScrollView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
@@ -31,16 +32,18 @@ class ViewController: UIViewController {
         loginButton.titleLabel?.textColor = UIColor.black
     }
     
+    @objc private func loginScreenTap() {
+        view.endEditing(true)
+    }
+    
     private func setUI() {
 //        idTextField.underline()
 //        pwTextField.underline()
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(loginScreenTap))
+        loginScrollView.addGestureRecognizer(tapGestureRecognizer)
+        
         loginButton.titleLabel?.textColor = UIColor.black
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        idTextField.resignFirstResponder()
-        pwTextField.resignFirstResponder()
     }
 }
 
