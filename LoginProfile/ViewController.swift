@@ -20,16 +20,25 @@ class ViewController: UIViewController {
         passwordTextField.delegate = self
     }
 
-    @IBAction func receiveInput(_ sender: UITextField) {
-        if let inputLength = sender.text?.count,
-            inputLength >= 5 {
-            loginButton.isEnabled = true
-            loginButton.backgroundColor = UIColor(rgb: Constant.yellow)
+    @IBAction func judgeInput(_ sender: UITextField) {
+        guard let input = sender.text else {
             return
         }
-        loginButton.isEnabled = false
-        loginButton.backgroundColor = UIColor(rgb: Constant.lightgray)
-        loginButton.titleLabel?.textColor = UIColor.black
+        if input.count >= Constant.validInputLength {
+            loginButton.isEnabled = true
+        } else {
+            loginButton.isEnabled = false
+        }
+        changeLoginButtonStyle(loginButton.isEnabled)
+    }
+    
+    private func changeLoginButtonStyle(_ state: Bool) {
+        if state == true {
+            loginButton.backgroundColor = UIColor(rgb: Constant.yellow)
+        } else {
+            loginButton.backgroundColor = UIColor(rgb: Constant.lightgray)
+            loginButton.titleLabel?.textColor = UIColor.black
+        }
     }
     
     @objc private func loginScreenTap() {
@@ -37,9 +46,6 @@ class ViewController: UIViewController {
     }
     
     private func setUI() {
-//        idTextField.underline()
-//        passwordTextField.underline()
-        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(loginScreenTap))
         loginScrollView.addGestureRecognizer(tapGestureRecognizer)
         
@@ -57,24 +63,7 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
-/*
-extension UITextField {
-    func underline() {
-        let border = CALayer()
-        let width = CGFloat(1.0)
-        border.borderColor = UIColor.placeholderText.cgColor
-        border.frame = CGRect(
-            x: 0,
-            y: self.frame.size.height - width,
-            width: self.frame.size.width,
-            height: width
-        )
-        border.borderWidth = width
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
-    }
-}
-*/
+
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int, alpha: Int = 0xFF) {
         self.init(
