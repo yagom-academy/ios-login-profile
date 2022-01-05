@@ -10,6 +10,7 @@
 		C2566D4627855F28006BE9D5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2566D4527855F28006BE9D5 /* ProfileViewController.swift */; };
 		C2566D4827856015006BE9D5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2566D4727856015006BE9D5 /* Profile.storyboard */; };
 		C2566D4A2785735B006BE9D5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2566D492785735B006BE9D5 /* ProfileView.swift */; };
+		C2566D4C2785D898006BE9D5 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2566D4B2785D898006BE9D5 /* Divider.swift */; };
 		C26DB35C278298690014751D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C26DB35B278298690014751D /* .swiftlint.yml */; };
 		C7D7D7952767836100F01B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7942767836100F01B39 /* AppDelegate.swift */; };
 		C7D7D7972767836100F01B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7962767836100F01B39 /* SceneDelegate.swift */; };
@@ -31,6 +32,7 @@
 		C2566D4527855F28006BE9D5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C2566D4727856015006BE9D5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C2566D492785735B006BE9D5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C2566D4B2785D898006BE9D5 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		C26DB35B278298690014751D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C7D7D7912767836100F01B39 /* LoginProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D7D7942767836100F01B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		C7D7D7882767836100F01B39 = {
 			isa = PBXGroup;
 			children = (
+				C2566D4B2785D898006BE9D5 /* Divider.swift */,
 				C26DB35B278298690014751D /* .swiftlint.yml */,
 				C7D7D7932767836100F01B39 /* LoginProfile */,
 				C7D7D7922767836100F01B39 /* Products */,
@@ -198,6 +201,7 @@
 				C7D7D7B0276783B200F01B39 /* FavouriteButton.swift in Sources */,
 				C7D7D7B1276783B200F01B39 /* CircleButton.swift in Sources */,
 				C7D7D7AD276783B200F01B39 /* CloseButton.swift in Sources */,
+				C2566D4C2785D898006BE9D5 /* Divider.swift in Sources */,
 				C7D7D7972767836100F01B39 /* SceneDelegate.swift in Sources */,
 				C2566D4627855F28006BE9D5 /* ProfileViewController.swift in Sources */,
 				C7D7D7AF276783B200F01B39 /* WonButton.swift in Sources */,
