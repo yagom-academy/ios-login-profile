@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet var dynamicTypeButtons: [UIButton]!
     
-    let minimumTextLength = 5
+    private let minimumTextLength = 5
     
     var isLoginButtonEnabled: Bool = false {
         didSet(isLoginButtonEnabled) {

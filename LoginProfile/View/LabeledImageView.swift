@@ -9,23 +9,18 @@ import UIKit
 
 class LabeledImageView: UIStackView {
     
-
-    private let imageView: UIImageView = {
-       let imageView = UIImageView()
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
-        imageView.image = UIImage.init(systemName: "message.fil")
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.tintColor = .white
         return imageView
     }()
     
-    private let imageDescriptionLabel: UILabel = {
+    let imageDescriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.text = "1:1 채팅"
         label.textColor = .white
         return label
     }()
@@ -34,17 +29,28 @@ class LabeledImageView: UIStackView {
         super.init(frame: frame)
         axis = .vertical
         spacing = 15
-        distribution = .fillProportionally
+        distribution = .fill
         alignment = .center
-        addArrangedSubview(imageView)
-        addArrangedSubview(imageDescriptionLabel)
+    
+        configureUI()
     }
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setImage(_ image: UIImage?) {
+        imageView.image = image
+    }
+    
+    func setDescriptionLabelText(_ text: String?) {
+        imageDescriptionLabel.text = text
+    }
 }
 
 extension LabeledImageView {
-    
+    private func configureUI(){
+        addArrangedSubview(imageView)
+        addArrangedSubview(imageDescriptionLabel)
+    }
 }

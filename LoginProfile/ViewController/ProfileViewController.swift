@@ -13,40 +13,91 @@ class ProfileViewController: UIViewController {
     private lazy var favouriteButton: FavouriteButton = FavouriteButton()
     private lazy var giftButton: GiftButton = GiftButton()
     private lazy var wonButton: WonButton = WonButton()
+    
     private lazy var topButtonStackView: UIStackView = {
         let stackView: UIStackView = UIStackView(arrangedSubviews: [giftButton, wonButton, favouriteButton])
         stackView.axis = .horizontal
-        stackView.spacing = topButtonSpacing
+        stackView.spacing = Constants.topButtonSpacing
         stackView.distribution = .fillEqually
         stackView.alignment = .center
         return stackView
     }()
     
-    let topButtonHeight: CGFloat = 26
-    let topButtonSpacing: CGFloat = 12
+    private let chatLabeledImageView: LabeledImageView = {
+        let labeledImageView = LabeledImageView()
+        labeledImageView.setImage(UIImage(systemName: "message.fill"))
+        labeledImageView.setDescriptionLabelText("1:1 채팅")
+        return labeledImageView
+    }()
+    
+    private let phoneLabeledImageView: LabeledImageView = {
+        let labeledImageView = LabeledImageView()
+        labeledImageView.setImage(UIImage(systemName: "phone.fill"))
+        labeledImageView.setDescriptionLabelText("통화하기")
+        return labeledImageView
+    }()
+    
+    private let storyLabeledImageView: LabeledImageView = {
+        let labeledImageView = LabeledImageView()
+        labeledImageView.setImage(UIImage(systemName: "quote.bubble.fill"))
+        labeledImageView.setDescriptionLabelText("카카오스토리")
+        return labeledImageView
+    }()
+    
+    private lazy var bottomLabeledImageStackView: UIStackView = {
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [chatLabeledImageView,
+                                                                    phoneLabeledImageView,
+                                                                    storyLabeledImageView])
+        stackView.axis = .horizontal
+        stackView.distribution = .equalCentering
+        stackView.alignment = .center
+        return stackView
+    }()
+    
+    private let profileView: ProfileView = {
+        let profileView = ProfileView()
+        profileView.setImage(UIImage(named: "yagom"))
+        profileView.setDescriptionLabelText("yagom")
+        return profileView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
         configureUI()
-        
-        let temp = LabeledImageView()
-        
-        temp.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        temp.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        temp.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        temp.heightAnchor.constraint(equalToConstant: 45).isActive = true
     }
 }
 
 extension ProfileViewController {
     
     private func configureUI() {
+        view.backgroundColor = .black
         configureCloseButton()
         configureTopButtonStackView()
+        configureBottomLabeledImageStackView()
         configureFavouriteButton()
         configureGiftButton()
         configureWonButton()
+        configureDivider()
+        configureProfileView()
+    }
+    
+    func configureProfileView(){
+        view.addSubview(profileView)
+        profileView.translatesAutoresizingMaskIntoConstraints = false
+        profileView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.25).isActive = true
+        profileView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        profileView.bottomAnchor.constraint(equalTo: bottomLabeledImageStackView.topAnchor, constant: -76).isActive = true
+    }
+    
+    func configureDivider(){
+        let dividerView = UIView()
+        view.addSubview(dividerView)
+        dividerView.translatesAutoresizingMaskIntoConstraints = false
+        dividerView.backgroundColor = .white.withAlphaComponent(0.3)
+        dividerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        dividerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        dividerView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        dividerView.bottomAnchor.constraint(equalTo: bottomLabeledImageStackView.topAnchor, constant: -25).isActive = true
     }
     
     func configureCloseButton() {
@@ -65,8 +116,16 @@ extension ProfileViewController {
         topButtonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         
         let topButtonCount = CGFloat(topButtonStackView.arrangedSubviews.count)
-        let topButtonStackViewWidth: CGFloat = topButtonHeight * topButtonCount + topButtonSpacing * (topButtonCount - 1)
+        let topButtonStackViewWidth: CGFloat = Constants.topButtonHeight * topButtonCount + Constants.topButtonSpacing * (topButtonCount - 1)
         topButtonStackView.widthAnchor.constraint(equalToConstant: topButtonStackViewWidth).isActive = true
+    }
+    
+    func configureBottomLabeledImageStackView() {
+        view.addSubview(bottomLabeledImageStackView)
+        bottomLabeledImageStackView.translatesAutoresizingMaskIntoConstraints = false
+        bottomLabeledImageStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -64).isActive = true
+        bottomLabeledImageStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
+        bottomLabeledImageStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35).isActive = true
     }
     
     func configureFavouriteButton() {
@@ -83,5 +142,9 @@ extension ProfileViewController {
         wonButton.translatesAutoresizingMaskIntoConstraints = false
         wonButton.widthAnchor.constraint(equalTo: wonButton.heightAnchor).isActive = true
     }
+    
+    struct Constants {
+        static let topButtonHeight: CGFloat = 26
+        static let topButtonSpacing: CGFloat = 12
+    }
 }
-
