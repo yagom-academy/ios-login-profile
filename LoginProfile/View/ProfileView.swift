@@ -34,20 +34,17 @@ class ProfileView: UIView {
         self.addSubview(bottomButtonsView)
         self.addSubview(divider)
         
-        drawProfileImage()
-        
         setConstraint(view: topButtonsView, left: 16, right: 16, top: 16, bottom: nil)
         setConstraint(view: bottomButtonsView, left: 60, right: 60, top: nil, bottom: 100)
         setConstraint(view: divider, left: 0, right: 0, top: nil, bottom: nil)
         divider.bottomAnchor.constraint(equalTo: bottomButtonsView.topAnchor, constant: -25).isActive = true
-        
     }
     
     func drawProfileImage() {
         self.addSubview(profileView)
         profileImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25).isActive = true
         profileImage.heightAnchor.constraint(equalTo: profileImage.widthAnchor).isActive = true
-        profileImage.layer.cornerRadius = 30
+        profileImage.layer.cornerRadius = self.frame.width * 0.25 * 0.3
         profileImage.clipsToBounds = true
         profileImage.contentMode = .scaleToFill
         

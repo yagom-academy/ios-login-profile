@@ -5,4 +5,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.view = ProfileView()
     }
+    
+    override func viewWillLayoutSubviews() {
+//        print(view.frame.width)
+        (view as? ProfileView)?.drawProfileImage()
+    }
 }
