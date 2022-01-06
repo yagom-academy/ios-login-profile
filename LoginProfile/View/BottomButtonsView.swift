@@ -55,26 +55,18 @@ class BottomButtonsView: UIStackView {
         return stackV
     }()
     
-    lazy var bottomButtonsView: UIStackView = {
-        let stackV = UIStackView(arrangedSubviews: [chatView, callView, storyView])
-        stackV.translatesAutoresizingMaskIntoConstraints = false
-        stackV.alignment = .fill
-        stackV.axis = .horizontal
-        stackV.distribution = .fillEqually
-        return stackV
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.addArrangedSubview(chatView)
+        self.addArrangedSubview(callView)
+        self.addArrangedSubview(storyView)
+        self.alignment = .fill
+        self.axis = .horizontal
+        self.distribution = .fillEqually
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(bottomButtonsView)
-        bottomButtonsView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        bottomButtonsView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
     }
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-
