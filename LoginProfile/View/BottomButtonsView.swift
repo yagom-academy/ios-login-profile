@@ -26,33 +26,33 @@ class BottomButtonsView: UIStackView {
     }()
     
     lazy var chatView: UIStackView = {
-        let stackV = UIStackView(arrangedSubviews: [chatImage, chatLabel])
-        stackV.translatesAutoresizingMaskIntoConstraints = false
-        stackV.alignment = .center
-        stackV.axis = .vertical
-        stackV.distribution = .equalSpacing
-        stackV.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        return stackV
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [chatImage, chatLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .center
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        return stackView
     }()
     
     lazy var callView: UIStackView = {
-        let stackV = UIStackView(arrangedSubviews: [callImage, callLabel])
-        stackV.translatesAutoresizingMaskIntoConstraints = false
-        stackV.alignment = .center
-        stackV.axis = .vertical
-        stackV.distribution = .equalSpacing
-        stackV.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        return stackV
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [callImage, callLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .center
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        return stackView
     }()
     
     lazy var storyView: UIStackView = {
-        let stackV = UIStackView(arrangedSubviews: [storyImage, storyLabel])
-        stackV.translatesAutoresizingMaskIntoConstraints = false
-        stackV.alignment = .center
-        stackV.axis = .vertical
-        stackV.distribution = .equalSpacing
-        stackV.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        return stackV
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [storyImage, storyLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .center
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        return stackView
     }()
     
     override init(frame: CGRect) {

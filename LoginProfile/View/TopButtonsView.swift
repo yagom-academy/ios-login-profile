@@ -6,23 +6,23 @@ class TopButtonsView: UIStackView {
     private var favouriteButton: FavouriteButton = FavouriteButton()
     
     lazy var functionButtonsView: UIStackView = {
-        let stackV = UIStackView(arrangedSubviews: [favouriteButton, wonButton, giftButton])
-        stackV.translatesAutoresizingMaskIntoConstraints = false
-        stackV.alignment = .center
-        stackV.axis = .horizontal
-        stackV.distribution = .equalSpacing
-        stackV.widthAnchor.constraint(equalToConstant: 130).isActive = true
-        return stackV
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [favouriteButton, wonButton, giftButton])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .center
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.widthAnchor.constraint(equalToConstant: 130).isActive = true
+        return stackView
     }()
     
     lazy var topButtonsView: UIStackView = {
-        let stackV = UIStackView(arrangedSubviews: [closeButton, functionButtonsView])
-        stackV.translatesAutoresizingMaskIntoConstraints = false
-        stackV.alignment = .center
-        stackV.axis = .horizontal
-        stackV.distribution = .equalSpacing
-        stackV.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        return stackV
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [closeButton, functionButtonsView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .center
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        return stackView
     }()
     
     override init(frame: CGRect) {

@@ -576,4 +576,3 @@ excluded:
     - LoginProfile/Button/GiftButton.swift
     - LoginProfile/Button/WonButton.swift
     - LoginProfile/Button/FavouriteButton.swift
-    - LoginProfile/View/ProfileView.swift

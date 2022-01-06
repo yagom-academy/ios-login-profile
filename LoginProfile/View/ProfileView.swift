@@ -18,13 +18,13 @@ class ProfileView: UIView {
     }()
     
     lazy var profileView: UIStackView = {
-        let stackV = UIStackView(arrangedSubviews: [profileImage, nameLabel])
-        stackV.translatesAutoresizingMaskIntoConstraints = false
-        stackV.alignment = .center
-        stackV.axis = .vertical
-        stackV.spacing = 5
-        stackV.distribution = .equalSpacing
-        return stackV
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [profileImage, nameLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .center
+        stackView.axis = .vertical
+        stackView.spacing = 5
+        stackView.distribution = .equalSpacing
+        return stackView
     }()
     
     override init(frame: CGRect) {
@@ -53,21 +53,20 @@ class ProfileView: UIView {
     }
     
     func setConstraint(view: UIView, left: CGFloat?, right: CGFloat?, top: CGFloat?, bottom: CGFloat?) {
-        let safeArea = self.safeAreaLayoutGuide
-        if let left = left {
+        let safeArea: UILayoutGuide = self.safeAreaLayoutGuide
+        if let left: CGFloat = left {
             view.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: left).isActive = true
         }
-        if let right = right {
+        if let right: CGFloat = right {
             view.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -right).isActive = true
         }
-        if let top = top {
+        if let top: CGFloat = top {
             view.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: top).isActive = true
         }
         
-        if let bottom = bottom {
+        if let bottom: CGFloat = bottom {
             view.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -bottom).isActive = true
         }
-        
     }
     
     required init?(coder: NSCoder) {
