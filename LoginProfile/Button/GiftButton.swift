@@ -23,7 +23,7 @@ class GiftButton: CircleButton {
         let width = bounds.width
 
         context.beginPath()
-        context.setLineWidth(3)
+        context.setLineWidth(1)
         context.setStrokeColor(UIColor.white.cgColor)
         
         let sideOne = bounds.width * 0.4 * 0.5

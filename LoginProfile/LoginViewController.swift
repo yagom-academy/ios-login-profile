@@ -17,6 +17,15 @@ class LoginViewController: UIViewController {
         activateButton(true)
     }
     
+    @IBAction func onLoginButtonPressed(_ sender: Any) {
+        print("login")
+        let board = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = board.instantiateViewController(withIdentifier: "ProfileViewController")
+        profileViewController.modalPresentationStyle = .fullScreen
+        present(profileViewController, animated: true, completion: nil)
+        
+    }
+    
     func activateButton(_ isActive: Bool) {
         loginButton.backgroundColor = isActive ? .systemYellow : .systemGray5
         self.loginButton.isEnabled = isActive

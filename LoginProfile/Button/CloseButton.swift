@@ -17,7 +17,7 @@ class CloseButton: UIButton {
         let width = bounds.width
         
         context.beginPath()
-        context.setLineWidth(3)
+        context.setLineWidth(1)
         context.setStrokeColor(UIColor.white.cgColor)
 
         context.move(to: CGPoint(x: width * 0.1,
