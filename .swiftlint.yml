@@ -571,8 +571,9 @@ excluded:
     - LoginProfile/FavouriteButton.swift
     - LoginProfile/AppDelegate.swift
     - LoginProfile/SceneDelegate.swift
-    - LoginProfile/CloseButton.swift
-    - LoginProfile/CircleButton.swift
-    - LoginProfile/GiftButton.swift
-    - LoginProfile/WonButton.swift
-    - LoginProfile/ProfileView.swift
+    - LoginProfile/Button/CloseButton.swift
+    - LoginProfile/Button/CircleButton.swift
+    - LoginProfile/Button/GiftButton.swift
+    - LoginProfile/Button/WonButton.swift
+    - LoginProfile/Button/FavouriteButton.swift
+    - LoginProfile/View/ProfileView.swift
