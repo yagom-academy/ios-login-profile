@@ -10,20 +10,35 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     private lazy var profileBottomMenuBar = ProfileBottomMenuBar()
+    private lazy var profileTopMenuBar = ProfileTopMenuBar()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setCloseButton()
         setUpPosition()
     }
     
+    @objc func touchUpCloseButton() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    private func setCloseButton() {
+        let closeButton = CloseButton()
+        view.addSubview(closeButton)
+        
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        closeButton.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 22).isActive = true
+        closeButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        closeButton.addTarget(self, action: #selector(touchUpCloseButton), for: .touchUpInside)
+    }
+    
     private func setUpPosition() {
-        profileBottomMenuBar.translatesAutoresizingMaskIntoConstraints = false
-        
         view.addSubview(profileBottomMenuBar)
+        profileBottomMenuBar.setUpPosition(view: view, top: nil, bottom: -30, left: 34, right: -34)
         
-        profileBottomMenuBar.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -64).isActive = true
-        profileBottomMenuBar.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 34).isActive = true
-        profileBottomMenuBar.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -34).isActive = true
+        view.addSubview(profileTopMenuBar)
+        profileTopMenuBar.setUpPosition(view: view, top: 20, bottom: nil, left: nil, right: -16)
     }
 }
