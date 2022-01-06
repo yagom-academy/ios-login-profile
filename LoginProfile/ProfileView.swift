@@ -7,7 +7,7 @@ class ProfileView: UIView {
     private var callImage: UIImageView = UIImageView(image: UIImage(named: "btn_phone"))
     private var storyImage: UIImageView = UIImageView(image: UIImage(named: "btn_quote"))
     
-    private var divider: Divider = Divider()
+    private var divider: UIView = UIView()
 
     private var wonButton: WonButton = WonButton()
     private var giftButton: GiftButton = GiftButton()
@@ -98,10 +98,7 @@ class ProfileView: UIView {
         chatLabel.text = "1:1 채팅"
         callLabel.text = "전화하기"
         storyLabel.text = "카카오스토리"
-        nameLabel.textColor = .white
-        chatLabel.textColor = .white
-        callLabel.textColor = .white
-        storyLabel.textColor = .white
+        makeColorIn(labels: [nameLabel, chatLabel, callLabel, storyLabel], color: .white)
         
         functionButtonsView.widthAnchor.constraint(equalToConstant: 130).isActive = true
         profileImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
@@ -109,12 +106,13 @@ class ProfileView: UIView {
         profileImage.layer.cornerRadius = 30
         profileImage.contentMode = .scaleToFill
         
-        profileView.center.y = self.center.y
-        
         setConstraint(view: topButtonsView, left: 16, right: 16, top: 16, bottom: nil)
         setConstraint(view: profileView, left: 0, right: 0, top: nil, bottom: 300)
         setConstraint(view: bottomButtonsView, left: 60, right: 60, top: nil, bottom: 90)
-//        setConstraint(view: divider, left: 0, right: 0, top: nil, bottom: -130)
+    }
+    
+    func makeColorIn(labels: [UILabel], color: UIColor) {
+        labels.forEach { $0.textColor = .white }
     }
     
     func setConstraint(view: UIView, left: CGFloat?, right: CGFloat?, top: CGFloat?, bottom: CGFloat?) {
