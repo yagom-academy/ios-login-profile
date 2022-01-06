@@ -9,7 +9,7 @@ import UIKit
 
 class LabeledImageView: UIStackView {
     
-    let imageView: UIImageView = {
+    private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
@@ -17,40 +17,60 @@ class LabeledImageView: UIStackView {
         return imageView
     }()
     
-    let imageDescriptionLabel: UILabel = {
+    private let imageDescriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
         label.textColor = .white
         return label
     }()
     
-    override init(frame: CGRect) {
+    private var isRoundCorner: Bool = false
+    
+    override private init(frame: CGRect) {
         super.init(frame: frame)
         axis = .vertical
         spacing = 15
         distribution = .fill
         alignment = .center
-    
         configureUI()
     }
     
+    convenience init(image: UIImage?, text: String?, isRoundCorner: Bool, textFont: UIFont? = .preferredFont(forTextStyle: .subheadline)) {
+        self.init(frame: .zero)
+        imageView.image = image
+        imageDescriptionLabel.text = text
+        self.imageDescriptionLabel.font = textFont
+        self.isRoundCorner = isRoundCorner
+    }
+    
+    convenience init(image: UIImage?, text: String?) {
+        self.init(image: image, text: text, isRoundCorner: false)
+    }
+
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setImage(_ image: UIImage?) {
-        imageView.image = image
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if isRoundCorner {
+            let radius: CGFloat = bounds.size.width * 0.3
+            imageView.layer.cornerRadius = radius
+        }
     }
     
-    func setDescriptionLabelText(_ text: String?) {
-        imageDescriptionLabel.text = text
-    }
-}
-
-extension LabeledImageView {
     private func configureUI(){
         addArrangedSubview(imageView)
         addArrangedSubview(imageDescriptionLabel)
+        
+        imageView.clipsToBounds = isRoundCorner
+    }
+    
+    func setupImageViewWidthEqaulToLabeledImageView() {
+        imageView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+    }
+    
+    func setUpImageViewWidthToHeightRatio(multiplier: CGFloat) {
+        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: multiplier).isActive = true
     }
 }
