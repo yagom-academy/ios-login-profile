@@ -7,6 +7,6 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        (view as? ProfileView)?.drawProfileImage()
+        (view as? ProfileView)?.makeProfileRound()
     }
 }
