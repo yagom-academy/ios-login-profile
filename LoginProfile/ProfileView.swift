@@ -75,6 +75,7 @@ class ProfileView: UIView {
         stackV.alignment = .center
         stackV.axis = .horizontal
         stackV.distribution = .equalSpacing
+        stackV.heightAnchor.constraint(equalToConstant: 30).isActive = true
         return stackV
     }()
     
@@ -104,9 +105,7 @@ class ProfileView: UIView {
         
         functionButtonsView.widthAnchor.constraint(equalToConstant: 130).isActive = true
         profileImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25).isActive = true
-        
         profileImage.heightAnchor.constraint(equalTo: profileImage.widthAnchor).isActive = true
-        
         profileView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         profileImage.layer.cornerRadius = 30
         profileImage.clipsToBounds = true
