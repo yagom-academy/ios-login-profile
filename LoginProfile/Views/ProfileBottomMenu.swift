@@ -33,7 +33,7 @@ class ProfileBottomMenu: BaseStackView {
         
         menuLabel.translatesAutoresizingMaskIntoConstraints = false
         menuLabel.font = .systemFont(ofSize: Constant.menuLabelFontSize)
-        menuLabel.textColor = UIColor(rgb: Constant.menuLabelFontColor)
+        menuLabel.textColor = UIColor(rgb: Constant.bottomMenuColor)
         
         return menuLabel
     }()
