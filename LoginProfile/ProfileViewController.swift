@@ -7,7 +7,6 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-//        print(view.frame.width)
         (view as? ProfileView)?.drawProfileImage()
     }
 }

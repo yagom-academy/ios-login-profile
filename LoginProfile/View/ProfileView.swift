@@ -33,7 +33,7 @@ class ProfileView: UIView {
         self.addSubview(topButtonsView)
         self.addSubview(bottomButtonsView)
         self.addSubview(divider)
-        
+        drawFullsizeBackground()
         setConstraint(view: topButtonsView, left: 16, right: 16, top: 16, bottom: nil)
         setConstraint(view: bottomButtonsView, left: 60, right: 60, top: nil, bottom: 100)
         setConstraint(view: divider, left: 0, right: 0, top: nil, bottom: nil)
@@ -50,6 +50,14 @@ class ProfileView: UIView {
         
         setConstraint(view: profileView, left: 0, right: 0, top: nil, bottom: nil)
         profileView.bottomAnchor.constraint(equalTo: divider.topAnchor, constant: -80).isActive = true
+    }
+    
+    func drawFullsizeBackground() {
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        backgroundImage.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        backgroundImage.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        backgroundImage.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
     func setConstraint(view: UIView, left: CGFloat?, right: CGFloat?, top: CGFloat?, bottom: CGFloat?) {
