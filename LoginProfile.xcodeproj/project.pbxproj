@@ -63,7 +63,6 @@
 		C7D7D7882767836100F01B39 = {
 			isa = PBXGroup;
 			children = (
-				C2566D4B2785D898006BE9D5 /* Divider.swift */,
 				C26DB35B278298690014751D /* .swiftlint.yml */,
 				C7D7D7932767836100F01B39 /* LoginProfile */,
 				C7D7D7922767836100F01B39 /* Products */,
@@ -81,6 +80,7 @@
 		C7D7D7932767836100F01B39 /* LoginProfile */ = {
 			isa = PBXGroup;
 			children = (
+				C2566D4B2785D898006BE9D5 /* Divider.swift */,
 				C7D7D7942767836100F01B39 /* AppDelegate.swift */,
 				C7D7D7962767836100F01B39 /* SceneDelegate.swift */,
 				C7D7D7982767836100F01B39 /* LoginViewController.swift */,

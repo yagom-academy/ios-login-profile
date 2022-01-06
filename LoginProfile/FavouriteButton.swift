@@ -20,7 +20,7 @@ class FavouriteButton: CircleButton {
         let drawingWidth = bounds.width * 0.7
 
         context.beginPath()
-        context.setLineWidth(3)
+        context.setLineWidth(1)
         context.setLineCap(.round)
         context.setLineJoin(.round)
         context.setStrokeColor(UIColor.white.cgColor)

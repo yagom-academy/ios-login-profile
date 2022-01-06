@@ -7,7 +7,7 @@ class ProfileView: UIView {
     private var callImage: UIImageView = UIImageView(image: UIImage(named: "btn_phone"))
     private var storyImage: UIImageView = UIImageView(image: UIImage(named: "btn_quote"))
     
-    private var divider: UIView = UIView()
+    private var divider: Divider = Divider()
 
     private var wonButton: WonButton = WonButton()
     private var giftButton: GiftButton = GiftButton()
@@ -55,6 +55,7 @@ class ProfileView: UIView {
         stackV.translatesAutoresizingMaskIntoConstraints = false
         stackV.alignment = .center
         stackV.axis = .vertical
+        stackV.spacing = 5
         stackV.distribution = .equalSpacing
         return stackV
     }()
@@ -71,7 +72,7 @@ class ProfileView: UIView {
     lazy var topButtonsView: UIStackView = {
         let stackV = UIStackView(arrangedSubviews: [closeButton, functionButtonsView])
         stackV.translatesAutoresizingMaskIntoConstraints = false
-        stackV.alignment = .fill
+        stackV.alignment = .center
         stackV.axis = .horizontal
         stackV.distribution = .equalSpacing
         return stackV
@@ -82,7 +83,7 @@ class ProfileView: UIView {
         stackV.translatesAutoresizingMaskIntoConstraints = false
         stackV.alignment = .fill
         stackV.axis = .horizontal
-        stackV.distribution = .equalSpacing
+        stackV.distribution = .fillEqually
         return stackV
     }()
     
@@ -95,20 +96,29 @@ class ProfileView: UIView {
         self.addSubview(divider)
         
         nameLabel.text = "claire"
+//        nameLabel.font = .title3
         chatLabel.text = "1:1 채팅"
         callLabel.text = "전화하기"
         storyLabel.text = "카카오스토리"
         makeColorIn(labels: [nameLabel, chatLabel, callLabel, storyLabel], color: .white)
         
         functionButtonsView.widthAnchor.constraint(equalToConstant: 130).isActive = true
-        profileImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        profileImage.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        profileImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25).isActive = true
+        
+        profileImage.heightAnchor.constraint(equalTo: profileImage.widthAnchor).isActive = true
+        
+        profileView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         profileImage.layer.cornerRadius = 30
+        profileImage.clipsToBounds = true
         profileImage.contentMode = .scaleToFill
         
         setConstraint(view: topButtonsView, left: 16, right: 16, top: 16, bottom: nil)
-        setConstraint(view: profileView, left: 0, right: 0, top: nil, bottom: 300)
-        setConstraint(view: bottomButtonsView, left: 60, right: 60, top: nil, bottom: 90)
+        setConstraint(view: profileView, left: 0, right: 0, top: nil, bottom: nil)
+        setConstraint(view: bottomButtonsView, left: 60, right: 60, top: nil, bottom: 50)
+        setConstraint(view: divider, left: 0, right: 0, top: nil, bottom: nil)
+        divider.bottomAnchor.constraint(equalTo: bottomButtonsView.topAnchor, constant: -25).isActive = true
+        profileView.bottomAnchor.constraint(equalTo: divider.topAnchor, constant: -80).isActive = true
+        
     }
     
     func makeColorIn(labels: [UILabel], color: UIColor) {

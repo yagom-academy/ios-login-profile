@@ -19,7 +19,7 @@ class WonButton: CircleButton {
         let width = bounds.width
         
         context.beginPath()
-        context.setLineWidth(3)
+        context.setLineWidth(1)
         context.setLineJoin(.round)
         context.setStrokeColor(UIColor.white.cgColor)
 
