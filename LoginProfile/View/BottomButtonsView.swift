@@ -4,9 +4,26 @@ class BottomButtonsView: UIStackView {
     private var callImage: UIImageView = UIImageView(image: UIImage(named: "btn_phone"))
     private var storyImage: UIImageView = UIImageView(image: UIImage(named: "btn_quote"))
     
-    private var chatLabel: UILabel = UILabel()
-    private var callLabel: UILabel = UILabel()
-    private var storyLabel: UILabel = UILabel()
+    private var chatLabel: UILabel = {
+        let label: UILabel = UILabel()
+        label.text = "1:1 채팅"
+        label.textColor = .white
+        return label
+    }()
+    
+    private var callLabel: UILabel = {
+        let label: UILabel = UILabel()
+        label.text = "전화하기"
+        label.textColor = .white
+        return label
+    }()
+    
+    private var storyLabel: UILabel = {
+        let label: UILabel = UILabel()
+        label.text = "카카오스토리"
+        label.textColor = .white
+        return label
+    }()
     
     lazy var chatView: UIStackView = {
         let stackV = UIStackView(arrangedSubviews: [chatImage, chatLabel])
@@ -53,18 +70,10 @@ class BottomButtonsView: UIStackView {
         self.addSubview(bottomButtonsView)
         bottomButtonsView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         bottomButtonsView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        chatLabel.text = "1:1 채팅"
-        callLabel.text = "전화하기"
-        storyLabel.text = "카카오스토리"
-        makeColorIn(labels: [chatLabel, callLabel, storyLabel], color: .white)
     }
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func makeColorIn(labels: [UILabel], color: UIColor) {
-        labels.forEach { $0.textColor = .white }
     }
 }
 

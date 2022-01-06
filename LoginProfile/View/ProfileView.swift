@@ -9,7 +9,13 @@ class ProfileView: UIView {
     
     private var divider: Divider = Divider()
     
-    private var nameLabel: UILabel = UILabel()
+    private var nameLabel: UILabel = {
+        let label: UILabel = UILabel()
+        label.text = "claire"
+        label.textColor = .white
+        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        return label
+    }()
     
     lazy var profileView: UIStackView = {
         let stackV = UIStackView(arrangedSubviews: [profileImage, nameLabel])
@@ -29,8 +35,6 @@ class ProfileView: UIView {
         self.addSubview(divider)
         
         drawProfileImage()
-        nameLabel.text = "claire"
-        nameLabel.textColor = .white
         
         setConstraint(view: topButtonsView, left: 16, right: 16, top: 16, bottom: nil)
         setConstraint(view: bottomButtonsView, left: 60, right: 60, top: nil, bottom: 100)
