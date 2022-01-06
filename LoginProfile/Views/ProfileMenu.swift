@@ -7,16 +7,17 @@
 
 import UIKit
 
-class ProfileBottomMenu: BaseStackView {
+class ProfileMenu: BaseStackView {
     
-    init(menuImage: UIImage?,  menuLabeltext: String?) {
+    init(menuImage: UIImage?, menuLabeltext: String?, spacing: CGFloat) {
         super.init(frame: .zero)
         menuImageView.image = menuImage
         menuLabel.text = menuLabeltext
         
         axis = .vertical
-        spacing = 17.58
+        self.spacing = spacing
         distribution = .fillEqually
+        alignment = .center
     }
     
     private lazy var menuImageView: UIImageView = {

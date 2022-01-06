@@ -26,20 +26,39 @@ class BaseStackView: UIStackView, Configurable {
     
     func configure() {}
     
-    func setUpPosition(layoutGuide: UILayoutGuide, top: Int?, bottom: Int?, left: Int?, right: Int?) {
+    func setUpPosition(
+        layoutGuide: UILayoutGuide,
+        top: Int?,
+        bottom: Int?,
+        left: Int?,
+        right: Int?,
+        centerX: Bool,
+        centerY: Bool
+    ) {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         if let top = top {
             self.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: CGFloat(top)).isActive = true
         }
+        
         if let bottom = bottom {
             self.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: CGFloat(bottom)).isActive = true
         }
+        
         if let right = right {
             self.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: CGFloat(right)).isActive = true
         }
+        
         if let left = left {
             self.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: CGFloat(left)).isActive = true
+        }
+        
+        if centerX == true {
+            self.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor).isActive = true
+        }
+        
+        if centerY == true {
+            self.centerYAnchor.constraint(equalTo: layoutGuide.centerYAnchor).isActive = true
         }
     }
 }

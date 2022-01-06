@@ -11,13 +11,20 @@ class ProfileViewController: UIViewController {
     
     private lazy var profileBottomMenuBar = ProfileBottomMenuBar()
     private lazy var profileTopMenuBar = ProfileTopMenuBar()
+    private lazy var profileInfo = ProfileMenu(
+        menuImage: UIImage(named: "image_profile"),
+        menuLabeltext: "kakao",
+        spacing: CGFloat(5)
+    )
+    private let closeButton = CloseButton()
+    private let bottomMenuBarLine = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
   
-        setUpPosition()
-        setCloseButton()
         setBottomMenuBarLine()
+        setUpComponentsPosition()
+        setCloseButton()
     }
     
     @objc func touchUpCloseButton() {
@@ -25,34 +32,59 @@ class ProfileViewController: UIViewController {
     }
     
     private func setCloseButton() {
-        let closeButton = CloseButton()
         view.addSubview(closeButton)
         
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         
-        closeButton.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 22).isActive = true
-        closeButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        closeButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 22).isActive = true
+        closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
         closeButton.addTarget(self, action: #selector(touchUpCloseButton), for: .touchUpInside)
     }
 
     private func setBottomMenuBarLine() {
-        let bottomMenuBarLine = UIView()
         bottomMenuBarLine.heightAnchor.constraint(equalToConstant: CGFloat(0.5)).isActive = true
-        bottomMenuBarLine.widthAnchor.constraint(equalToConstant: CGFloat(10000)).isActive = true
 
         bottomMenuBarLine.translatesAutoresizingMaskIntoConstraints = false
         bottomMenuBarLine.backgroundColor = UIColor(rgb: Constant.bottomMenuColor)
-        view.addSubview(bottomMenuBarLine)
-
-        bottomMenuBarLine.bottomAnchor.constraint(equalTo: profileBottomMenuBar.topAnchor, constant: -25).isActive = true
-        bottomMenuBarLine.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
     
-    private func setUpPosition() {
-        view.addSubview(profileBottomMenuBar)
-        profileBottomMenuBar.setUpPosition(layoutGuide: view.safeAreaLayoutGuide, top: nil, bottom: -30, left: 34, right: -34)
-        
+    private func setUpComponentsPosition() {
         view.addSubview(profileTopMenuBar)
-        profileTopMenuBar.setUpPosition(layoutGuide: view.safeAreaLayoutGuide, top: 20, bottom: nil, left: nil, right: -16)
+        profileTopMenuBar.setUpPosition(
+            layoutGuide: view.safeAreaLayoutGuide,
+            top: 20,
+            bottom: nil,
+            left: nil,
+            right: -16,
+            centerX: false,
+            centerY: false
+        )
+        
+        view.addSubview(profileBottomMenuBar)
+        profileBottomMenuBar.setUpPosition(
+            layoutGuide: view.safeAreaLayoutGuide,
+            top: nil,
+            bottom: -30,
+            left: 34,
+            right: -34,
+            centerX: false,
+            centerY: false
+        )
+        
+        view.addSubview(bottomMenuBarLine)
+        bottomMenuBarLine.bottomAnchor.constraint(equalTo: profileBottomMenuBar.topAnchor, constant: -25).isActive = true
+        bottomMenuBarLine.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        bottomMenuBarLine.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        
+        view.addSubview(profileInfo)
+        profileInfo.setUpPosition(
+            layoutGuide: bottomMenuBarLine.layoutMarginsGuide,
+            top: nil,
+            bottom: -51,
+            left: nil,
+            right: nil,
+            centerX: true,
+            centerY: false
+        )
     }
 }

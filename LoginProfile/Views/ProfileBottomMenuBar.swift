@@ -14,21 +14,25 @@ class ProfileBottomMenuBar: BaseStackView {
         
         axis = .horizontal
         distribution = .equalCentering
+        alignment = .bottom
     }
     
-    private lazy var chatMenu = ProfileBottomMenu(
+    private lazy var chatMenu = ProfileMenu(
         menuImage: UIImage(named: "btn_bubble"),
-        menuLabeltext: Constant.chatMenuLabelText
+        menuLabeltext: Constant.chatMenuLabelText,
+        spacing: CGFloat(17.58)
     )
     
-    private lazy var callMenu = ProfileBottomMenu(
+    private lazy var callMenu = ProfileMenu(
         menuImage: UIImage(named: "btn_phone"),
-        menuLabeltext: Constant.callMenuLabelText
+        menuLabeltext: Constant.callMenuLabelText,
+        spacing: CGFloat(17.58)
     )
     
-    private lazy var kakaoStoryMenu = ProfileBottomMenu(
+    private lazy var kakaoStoryMenu = ProfileMenu(
         menuImage: UIImage(named: "btn_quote"),
-        menuLabeltext: Constant.kakaoStoryMenuLabelText
+        menuLabeltext: Constant.kakaoStoryMenuLabelText,
+        spacing: CGFloat(17.58)
     )
     
     override func configure() {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6EA788DF2785A97800064B4C /* ProfileBottomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA788DE2785A97800064B4C /* ProfileBottomMenu.swift */; };
+		6EA788DF2785A97800064B4C /* ProfileMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA788DE2785A97800064B4C /* ProfileMenu.swift */; };
 		6EA788E12785AE7800064B4C /* BaseStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA788E02785AE7800064B4C /* BaseStackView.swift */; };
 		6EA788E32785CF3D00064B4C /* ProfileBottomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA788E22785CF3D00064B4C /* ProfileBottomMenuBar.swift */; };
 		6EEACC732783EAC4001E3679 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EEACC752783EAC4001E3679 /* Localization.strings */; };
@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6EA788DE2785A97800064B4C /* ProfileBottomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBottomMenu.swift; sourceTree = "<group>"; };
+		6EA788DE2785A97800064B4C /* ProfileMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenu.swift; sourceTree = "<group>"; };
 		6EA788E02785AE7800064B4C /* BaseStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStackView.swift; sourceTree = "<group>"; };
 		6EA788E22785CF3D00064B4C /* ProfileBottomMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBottomMenuBar.swift; sourceTree = "<group>"; };
 		6EEACC742783EAC4001E3679 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				C7D7D7A9276783B200F01B39 /* GiftButton.swift */,
 				C7D7D7AA276783B200F01B39 /* WonButton.swift */,
 				6EA788E02785AE7800064B4C /* BaseStackView.swift */,
-				6EA788DE2785A97800064B4C /* ProfileBottomMenu.swift */,
+				6EA788DE2785A97800064B4C /* ProfileMenu.swift */,
 				6EA788E22785CF3D00064B4C /* ProfileBottomMenuBar.swift */,
 				C23B421327866B840055BDF2 /* ProfileTopMenuBar.swift */,
 			);
@@ -215,7 +215,7 @@
 				C7D7D7972767836100F01B39 /* SceneDelegate.swift in Sources */,
 				C7D7D7AF276783B200F01B39 /* WonButton.swift in Sources */,
 				C7D7D7AE276783B200F01B39 /* GiftButton.swift in Sources */,
-				6EA788DF2785A97800064B4C /* ProfileBottomMenu.swift in Sources */,
+				6EA788DF2785A97800064B4C /* ProfileMenu.swift in Sources */,
 				C2900D382783E1AE00088596 /* Constants.swift in Sources */,
 				6EA788E12785AE7800064B4C /* BaseStackView.swift in Sources */,
 			);
