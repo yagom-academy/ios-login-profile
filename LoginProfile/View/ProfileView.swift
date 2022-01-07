@@ -1,15 +1,15 @@
 import UIKit
 
 class ProfileView: UIView {
-    private var backgroundImage: UIImageView = UIImageView(image: UIImage(named: "sky"))
-    private var profileImage: UIImageView = UIImageView(image: UIImage(named: "penguine"))
+    private let backgroundImage: UIImageView = UIImageView(image: UIImage(named: "sky"))
+    private let profileImage: UIImageView = UIImageView(image: UIImage(named: "penguine"))
     
-    private var topButtonsView: TopButtonsView = TopButtonsView()
-    private var bottomButtonsView: BottomButtonsView = BottomButtonsView()
+    private let topButtonsView: TopButtonsStackView = TopButtonsStackView()
+    private let bottomButtonsView: BottomButtonsStackView = BottomButtonsStackView()
     
-    private var divider: Divider = Divider()
+    private let divider: Divider = Divider()
     
-    private var nameLabel: UILabel = {
+    private let nameLabel: UILabel = {
         let label: UILabel = UILabel()
         label.text = "claire"
         label.textColor = .white
@@ -17,7 +17,7 @@ class ProfileView: UIView {
         return label
     }()
     
-    lazy var profileView: UIStackView = {
+    private lazy var profileView: UIStackView = {
         let stackView: UIStackView = UIStackView(arrangedSubviews: [profileImage, nameLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
@@ -41,7 +41,7 @@ class ProfileView: UIView {
         divider.bottomAnchor.constraint(equalTo: bottomButtonsView.topAnchor, constant: -25).isActive = true
     }
     
-    func drawProfileImage() {
+    private func drawProfileImage() {
         self.addSubview(profileView)
         profileImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25).isActive = true
         profileImage.heightAnchor.constraint(equalTo: profileImage.widthAnchor).isActive = true
@@ -56,7 +56,7 @@ class ProfileView: UIView {
         profileImage.layer.cornerRadius = self.frame.width * 0.25 * 0.3
     }
     
-    func drawFullsizeBackground() {
+    private func drawFullsizeBackground() {
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         backgroundImage.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         backgroundImage.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true

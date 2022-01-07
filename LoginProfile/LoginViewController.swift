@@ -17,14 +17,14 @@ class LoginViewController: UIViewController {
         activateButton(true)
     }
     
-    @IBAction private func onLoginButtonPressed(_ sender: Any) {
-        let board: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        let profileViewController: UIViewController = board.instantiateViewController(withIdentifier: "ProfileViewController")
+    @IBAction private func tapLoginButton(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
         profileViewController.modalPresentationStyle = .fullScreen
         present(profileViewController, animated: true, completion: nil)
     }
     
-    func activateButton(_ isActive: Bool) {
+    private func activateButton(_ isActive: Bool) {
         loginButton.backgroundColor = isActive ? .systemYellow : .systemGray5
         self.loginButton.isEnabled = isActive
     }

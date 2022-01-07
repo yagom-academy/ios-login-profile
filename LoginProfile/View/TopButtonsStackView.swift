@@ -1,11 +1,11 @@
 import UIKit
-class TopButtonsView: UIStackView {
-    private var wonButton: WonButton = WonButton()
-    private var giftButton: GiftButton = GiftButton()
-    private var closeButton: CloseButton = CloseButton()
-    private var favouriteButton: FavouriteButton = FavouriteButton()
+class TopButtonsStackView: UIStackView {
+    private let wonButton: WonButton = WonButton()
+    private let giftButton: GiftButton = GiftButton()
+    private let closeButton: CloseButton = CloseButton()
+    private let favouriteButton: FavouriteButton = FavouriteButton()
     
-    lazy var functionButtonsView: UIStackView = {
+    private lazy var functionButtonsView: UIStackView = {
         let stackView: UIStackView = UIStackView(arrangedSubviews: [favouriteButton, wonButton, giftButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
@@ -15,7 +15,7 @@ class TopButtonsView: UIStackView {
         return stackView
     }()
     
-    lazy var topButtonsView: UIStackView = {
+    private lazy var topButtonsView: UIStackView = {
         let stackView: UIStackView = UIStackView(arrangedSubviews: [closeButton, functionButtonsView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center

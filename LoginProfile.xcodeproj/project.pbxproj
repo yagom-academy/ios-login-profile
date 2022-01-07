@@ -11,8 +11,8 @@
 		C2566D4827856015006BE9D5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2566D4727856015006BE9D5 /* Profile.storyboard */; };
 		C2566D4A2785735B006BE9D5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2566D492785735B006BE9D5 /* ProfileView.swift */; };
 		C2566D4C2785D898006BE9D5 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2566D4B2785D898006BE9D5 /* Divider.swift */; };
-		C2566D502786952C006BE9D5 /* TopButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2566D4F2786952C006BE9D5 /* TopButtonsView.swift */; };
-		C2566D5227869A1D006BE9D5 /* BottomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2566D5127869A1D006BE9D5 /* BottomButtonsView.swift */; };
+		C2566D502786952C006BE9D5 /* TopButtonsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2566D4F2786952C006BE9D5 /* TopButtonsStackView.swift */; };
+		C2566D5227869A1D006BE9D5 /* BottomButtonsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2566D5127869A1D006BE9D5 /* BottomButtonsStackView.swift */; };
 		C26DB35C278298690014751D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C26DB35B278298690014751D /* .swiftlint.yml */; };
 		C7D7D7952767836100F01B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7942767836100F01B39 /* AppDelegate.swift */; };
 		C7D7D7972767836100F01B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7962767836100F01B39 /* SceneDelegate.swift */; };
@@ -35,8 +35,8 @@
 		C2566D4727856015006BE9D5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C2566D492785735B006BE9D5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C2566D4B2785D898006BE9D5 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
-		C2566D4F2786952C006BE9D5 /* TopButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopButtonsView.swift; sourceTree = "<group>"; };
-		C2566D5127869A1D006BE9D5 /* BottomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonsView.swift; sourceTree = "<group>"; };
+		C2566D4F2786952C006BE9D5 /* TopButtonsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopButtonsStackView.swift; sourceTree = "<group>"; };
+		C2566D5127869A1D006BE9D5 /* BottomButtonsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonsStackView.swift; sourceTree = "<group>"; };
 		C26DB35B278298690014751D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C7D7D7912767836100F01B39 /* LoginProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D7D7942767836100F01B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,8 +69,8 @@
 			children = (
 				C2566D492785735B006BE9D5 /* ProfileView.swift */,
 				C2566D4B2785D898006BE9D5 /* Divider.swift */,
-				C2566D4F2786952C006BE9D5 /* TopButtonsView.swift */,
-				C2566D5127869A1D006BE9D5 /* BottomButtonsView.swift */,
+				C2566D4F2786952C006BE9D5 /* TopButtonsStackView.swift */,
+				C2566D5127869A1D006BE9D5 /* BottomButtonsStackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2566D502786952C006BE9D5 /* TopButtonsView.swift in Sources */,
+				C2566D502786952C006BE9D5 /* TopButtonsStackView.swift in Sources */,
 				C7D7D7992767836100F01B39 /* LoginViewController.swift in Sources */,
 				C7D7D7952767836100F01B39 /* AppDelegate.swift in Sources */,
 				C2566D4A2785735B006BE9D5 /* ProfileView.swift in Sources */,
@@ -229,7 +229,7 @@
 				C2566D4627855F28006BE9D5 /* ProfileViewController.swift in Sources */,
 				C7D7D7AF276783B200F01B39 /* WonButton.swift in Sources */,
 				C7D7D7AE276783B200F01B39 /* GiftButton.swift in Sources */,
-				C2566D5227869A1D006BE9D5 /* BottomButtonsView.swift in Sources */,
+				C2566D5227869A1D006BE9D5 /* BottomButtonsStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

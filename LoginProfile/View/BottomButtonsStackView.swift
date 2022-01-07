@@ -1,31 +1,31 @@
 import UIKit
-class BottomButtonsView: UIStackView {
-    private var chatImage: UIImageView = UIImageView(image: UIImage(named: "btn_bubble"))
-    private var callImage: UIImageView = UIImageView(image: UIImage(named: "btn_phone"))
-    private var storyImage: UIImageView = UIImageView(image: UIImage(named: "btn_quote"))
+class BottomButtonsStackView: UIStackView {
+    private let chatImage: UIImageView = UIImageView(image: UIImage(named: "btn_bubble"))
+    private let callImage: UIImageView = UIImageView(image: UIImage(named: "btn_phone"))
+    private let storyImage: UIImageView = UIImageView(image: UIImage(named: "btn_quote"))
     
-    private var chatLabel: UILabel = {
+    private let chatLabel: UILabel = {
         let label: UILabel = UILabel()
         label.text = "1:1 채팅"
         label.textColor = .white
         return label
     }()
     
-    private var callLabel: UILabel = {
+    private let callLabel: UILabel = {
         let label: UILabel = UILabel()
         label.text = "전화하기"
         label.textColor = .white
         return label
     }()
     
-    private var storyLabel: UILabel = {
+    private let storyLabel: UILabel = {
         let label: UILabel = UILabel()
         label.text = "카카오스토리"
         label.textColor = .white
         return label
     }()
     
-    lazy var chatView: UIStackView = {
+    private lazy var chatView: UIStackView = {
         let stackView: UIStackView = UIStackView(arrangedSubviews: [chatImage, chatLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
@@ -35,7 +35,7 @@ class BottomButtonsView: UIStackView {
         return stackView
     }()
     
-    lazy var callView: UIStackView = {
+    private lazy var callView: UIStackView = {
         let stackView: UIStackView = UIStackView(arrangedSubviews: [callImage, callLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
@@ -45,7 +45,7 @@ class BottomButtonsView: UIStackView {
         return stackView
     }()
     
-    lazy var storyView: UIStackView = {
+    private lazy var storyView: UIStackView = {
         let stackView: UIStackView = UIStackView(arrangedSubviews: [storyImage, storyLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
