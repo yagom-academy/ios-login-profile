@@ -50,7 +50,7 @@ class ProfileViewController: UIViewController {
     
     private func setComponentsPosition() {
         view.addSubview(profileTopMenuBar)
-        profileTopMenuBar.setUpPosition(
+        profileTopMenuBar.setPosition(
             layoutGuide: view.safeAreaLayoutGuide,
             top: 20,
             bottom: nil,
@@ -61,7 +61,7 @@ class ProfileViewController: UIViewController {
         )
         
         view.addSubview(profileBottomMenuBar)
-        profileBottomMenuBar.setUpPosition(
+        profileBottomMenuBar.setPosition(
             layoutGuide: view.safeAreaLayoutGuide,
             top: nil,
             bottom: -30,
@@ -77,7 +77,7 @@ class ProfileViewController: UIViewController {
         bottomMenuBarLine.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         
         view.addSubview(profileInfo)
-        profileInfo.setUpPosition(
+        profileInfo.setPosition(
             layoutGuide: bottomMenuBarLine.layoutMarginsGuide,
             top: nil,
             bottom: -51,

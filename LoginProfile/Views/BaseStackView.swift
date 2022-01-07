@@ -26,7 +26,7 @@ class BaseStackView: UIStackView, Configurable {
     
     func configure() {}
     
-    func setUpPosition(
+    func setPosition(
         layoutGuide: UILayoutGuide,
         top: Int?,
         bottom: Int?,
