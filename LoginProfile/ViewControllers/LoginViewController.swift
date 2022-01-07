@@ -1,12 +1,13 @@
 //
-//  LoginProfile - ViewController.swift
+//  LoginProfile - LoginViewController.swift
 //  Created by yagom. 
 //  Copyright © yagom. All rights reserved.
 // 
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
+    
     @IBOutlet weak var loginScrollView: UIScrollView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var idTextField: UITextField!
@@ -24,11 +25,13 @@ class ViewController: UIViewController {
         guard let input = sender.text else {
             return
         }
-        if input.count >= Constant.validInputLength {
+        
+        if input.count >= Constant.idValidInputLength {
             loginButton.isEnabled = true
         } else {
             loginButton.isEnabled = false
         }
+        
         changeLoginButtonStyle(loginButton.isEnabled)
     }
     
@@ -53,7 +56,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == idTextField {
             passwordTextField.becomeFirstResponder()
@@ -61,24 +64,5 @@ extension ViewController: UITextFieldDelegate {
         }
         passwordTextField.resignFirstResponder()
         return true
-    }
-}
-
-extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int, alpha: Int = 0xFF) {
-        self.init(
-            red: CGFloat(red) / 255.0,
-            green: CGFloat(green) / 255.0,
-            blue: CGFloat(blue) / 255.0,
-            alpha: CGFloat(alpha) / 255.0
-        )
-    }
-
-    convenience init(rgb: Int) {
-        self.init(
-           red: (rgb >> 16) & 0xFF,
-           green: (rgb >> 8) & 0xFF,
-           blue: rgb & 0xFF
-        )
     }
 }
