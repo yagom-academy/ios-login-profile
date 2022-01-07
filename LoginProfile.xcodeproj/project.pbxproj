@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C2136D3F27840D7600C25400 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2136D3E27840D7600C25400 /* UIColor+Extension.swift */; };
+		C29F385A27855DE700029A00 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F385927855DE700029A00 /* ProfileViewController.swift */; };
+		C29F386027856E5E00029A00 /* LabeledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F385F27856E5E00029A00 /* LabeledImageView.swift */; };
 		C7D7D7952767836100F01B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7942767836100F01B39 /* AppDelegate.swift */; };
 		C7D7D7972767836100F01B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7962767836100F01B39 /* SceneDelegate.swift */; };
-		C7D7D7992767836100F01B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7982767836100F01B39 /* ViewController.swift */; };
+		C7D7D7992767836100F01B39 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7D7982767836100F01B39 /* LoginViewController.swift */; };
 		C7D7D79C2767836100F01B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D7D79A2767836100F01B39 /* Main.storyboard */; };
 		C7D7D79E2767836200F01B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D7D79D2767836200F01B39 /* Assets.xcassets */; };
 		C7D7D7A12767836200F01B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D7D79F2767836200F01B39 /* LaunchScreen.storyboard */; };
@@ -26,10 +28,12 @@
 		C234B05D27843533005B9C8A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		C234B05E27843533005B9C8A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C234B0602784355C005B9C8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		C29F385927855DE700029A00 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C29F385F27856E5E00029A00 /* LabeledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledImageView.swift; sourceTree = "<group>"; };
 		C7D7D7912767836100F01B39 /* LoginProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D7D7942767836100F01B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7D7D7962767836100F01B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C7D7D7982767836100F01B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7D7D7982767836100F01B39 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C7D7D79B2767836100F01B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7D7D79D2767836200F01B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7D7D7A02767836200F01B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +56,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C29F385B27856DAD00029A00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7D7D7A8276783B200F01B39 /* CloseButton.swift */,
+				C7D7D7AC276783B200F01B39 /* CircleButton.swift */,
+				C7D7D7AB276783B200F01B39 /* FavouriteButton.swift */,
+				C7D7D7A9276783B200F01B39 /* GiftButton.swift */,
+				C7D7D7AA276783B200F01B39 /* WonButton.swift */,
+				C29F385F27856E5E00029A00 /* LabeledImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C29F385C27856DBD00029A00 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7D7D7982767836100F01B39 /* LoginViewController.swift */,
+				C29F385927855DE700029A00 /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C29F385E27856DFA00029A00 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C2136D3E27840D7600C25400 /* UIColor+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C7D7D7882767836100F01B39 = {
 			isa = PBXGroup;
 			children = (
@@ -71,15 +105,11 @@
 		C7D7D7932767836100F01B39 /* LoginProfile */ = {
 			isa = PBXGroup;
 			children = (
+				C29F385C27856DBD00029A00 /* ViewController */,
+				C29F385B27856DAD00029A00 /* View */,
+				C29F385E27856DFA00029A00 /* Utils */,
 				C7D7D7942767836100F01B39 /* AppDelegate.swift */,
 				C7D7D7962767836100F01B39 /* SceneDelegate.swift */,
-				C7D7D7982767836100F01B39 /* ViewController.swift */,
-				C7D7D7A8276783B200F01B39 /* CloseButton.swift */,
-				C7D7D7AC276783B200F01B39 /* CircleButton.swift */,
-				C7D7D7AB276783B200F01B39 /* FavouriteButton.swift */,
-				C7D7D7A9276783B200F01B39 /* GiftButton.swift */,
-				C7D7D7AA276783B200F01B39 /* WonButton.swift */,
-				C2136D3E27840D7600C25400 /* UIColor+Extension.swift */,
 				C7D7D79A2767836100F01B39 /* Main.storyboard */,
 				C7D7D79D2767836200F01B39 /* Assets.xcassets */,
 				C7D7D79F2767836200F01B39 /* LaunchScreen.storyboard */,
@@ -160,8 +190,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D7D7992767836100F01B39 /* ViewController.swift in Sources */,
+				C29F386027856E5E00029A00 /* LabeledImageView.swift in Sources */,
+				C7D7D7992767836100F01B39 /* LoginViewController.swift in Sources */,
 				C2136D3F27840D7600C25400 /* UIColor+Extension.swift in Sources */,
+				C29F385A27855DE700029A00 /* ProfileViewController.swift in Sources */,
 				C7D7D7952767836100F01B39 /* AppDelegate.swift in Sources */,
 				C7D7D7B0276783B200F01B39 /* FavouriteButton.swift in Sources */,
 				C7D7D7B1276783B200F01B39 /* CircleButton.swift in Sources */,

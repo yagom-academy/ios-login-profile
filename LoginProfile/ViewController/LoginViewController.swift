@@ -6,7 +6,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginButton: UIButton!
@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet var dynamicTypeButtons: [UIButton]!
     
-    let minimumTextLength = 5
+    private let minimumTextLength = 5
     
-    var isLoginButtonEnabled: Bool = false {
+    private var isLoginButtonEnabled: Bool = false {
         didSet(isLoginButtonEnabled) {
             self.toggleLoginButtonEnabled(isLoginButtonEnabled)
         }
@@ -37,19 +37,19 @@ class ViewController: UIViewController {
         }
     }
     
-    func configureUI() {
+    private func configureUI() {
         loginButton.setTitleColor(.labelDarkGrayColor, for: .disabled)
         dynamicTypeButtons.forEach{ button in
             button.titleLabel?.adjustsFontSizeToFitWidth = true
         }
     }
     
-    func configureKeyboard() {
+    private func configureKeyboard() {
         let touch = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         scrollView.addGestureRecognizer(touch)
     }
     
-    func configure() {
+    private func configure() {
         NotificationCenter.default.addObserver(self, selector: #selector(adjustButtonDynamicType),
                                                name: UIContentSizeCategory.didChangeNotification, object: nil)
         
@@ -58,12 +58,12 @@ class ViewController: UIViewController {
         passwordTextField.delegate = self
     }
     
-    func validateEmailInput(_ input: String?) -> Bool {
+    private func validateEmailInput(_ input: String?) -> Bool {
         guard let input = input else { return false }
         return input.count >= minimumTextLength
     }
     
-    func toggleLoginButtonEnabled(_ isEnabled: Bool) {
+    private func toggleLoginButtonEnabled(_ isEnabled: Bool) {
         loginButton.isEnabled = isEnabled
         
         let buttonBackgroundColor: UIColor? = loginButton.isEnabled ? .enabledLoginButtonColor : .buttonBackgroundColor
@@ -79,9 +79,14 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    @IBAction func loginButtonClicked(_ sender: Any) {
+        let profileViewController = ProfileViewController()
+        profileViewController.modalPresentationStyle = .fullScreen
+        present(profileViewController, animated: true, completion: nil)
+    }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case emailOrPhoneNumberTextField:
