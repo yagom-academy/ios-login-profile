@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
   
         setBottomMenuBarLine()
-        setUpComponentsPosition()
+        setComponentsPosition()
         setCloseButton()
     }
     
@@ -48,7 +48,7 @@ class ProfileViewController: UIViewController {
         bottomMenuBarLine.backgroundColor = UIColor(rgb: Constant.bottomMenuColor)
     }
     
-    private func setUpComponentsPosition() {
+    private func setComponentsPosition() {
         view.addSubview(profileTopMenuBar)
         profileTopMenuBar.setUpPosition(
             layoutGuide: view.safeAreaLayoutGuide,
