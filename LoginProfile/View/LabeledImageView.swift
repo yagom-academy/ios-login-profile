@@ -9,6 +9,11 @@ import UIKit
 
 class LabeledImageView: UIStackView {
     
+    enum ViewType {
+        case profile
+        case normal
+    }
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -24,27 +29,18 @@ class LabeledImageView: UIStackView {
         return label
     }()
     
-    private var isRoundCorner: Bool = false
-    
-    override private init(frame: CGRect) {
-        super.init(frame: frame)
-        axis = .vertical
-        spacing = 15
-        distribution = .fill
-        alignment = .center
-        configureUI()
-    }
-    
-    convenience init(image: UIImage?, text: String?, isRoundCorner: Bool, textFont: UIFont? = .preferredFont(forTextStyle: .subheadline)) {
-        self.init(frame: .zero)
+    private let viewType: ViewType
+
+    init(type: ViewType = .normal, image: UIImage?, text: String?) {
+        viewType = type
+        super.init(frame: .zero)
+
         imageView.image = image
         imageDescriptionLabel.text = text
-        self.imageDescriptionLabel.font = textFont
-        self.isRoundCorner = isRoundCorner
-    }
-    
-    convenience init(image: UIImage?, text: String?) {
-        self.init(image: image, text: text, isRoundCorner: false)
+        
+        configureUI()
+        configureConstraints()
+        configureStackViewProperties()
     }
 
     required init(coder: NSCoder) {
@@ -53,24 +49,35 @@ class LabeledImageView: UIStackView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if isRoundCorner {
+        
+        if viewType == .profile {
             let radius: CGFloat = bounds.size.width * 0.3
             imageView.layer.cornerRadius = radius
         }
+    }
+    
+    private func configureStackViewProperties() {
+        axis = .vertical
+        spacing = viewType == .normal ? 15 : 5
+        distribution = .fill
+        alignment = .center
     }
     
     private func configureUI(){
         addArrangedSubview(imageView)
         addArrangedSubview(imageDescriptionLabel)
         
-        imageView.clipsToBounds = isRoundCorner
+        imageView.clipsToBounds = viewType == .profile
+        
+        let font: UIFont = viewType == .normal ? .preferredFont(forTextStyle: .subheadline) : .preferredFont(forTextStyle: .title3)
+        imageDescriptionLabel.font = font
+        
     }
     
-    func setupImageViewWidthEqaulToLabeledImageView() {
-        imageView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-    }
-    
-    func setUpImageViewWidthToHeightRatio(multiplier: CGFloat) {
-        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: multiplier).isActive = true
+    private func configureConstraints() {
+        if viewType == .profile {
+            imageView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
+        }
     }
 }
