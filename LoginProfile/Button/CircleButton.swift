@@ -20,7 +20,7 @@ class CircleButton: UIButton {
                                         dy: height * 0.05)
         
         context.beginPath()
-        context.setLineWidth(3)
+        context.setLineWidth(1)
         context.setStrokeColor(UIColor.white.cgColor)
         context.addEllipse(in: circleRect)
         context.drawPath(using: .stroke)

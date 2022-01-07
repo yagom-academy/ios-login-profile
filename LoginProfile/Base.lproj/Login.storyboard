@@ -90,9 +90,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="카카오계정 로그인"/>
                                 <connections>
-                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAp-xY-PF8"/>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="242-dR-qvT"/>
-                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iyg-vo-ttC"/>
+                                    <action selector="tapLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kjW-aJ-qmE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zH-Nk-g4N">
@@ -137,7 +135,7 @@
                     </view>
                     <connections>
                         <outlet property="emailOrPhoneNumber" destination="1hZ-6H-kZE" id="FRY-JI-WYd"/>
-                        <outlet property="loginButton" destination="sNi-44-KmH" id="7tm-hQ-upR"/>
+                        <outlet property="loginButton" destination="sNi-44-KmH" id="rJ8-K6-mXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
