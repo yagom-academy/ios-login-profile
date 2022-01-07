@@ -124,28 +124,52 @@ class ProfileViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-            
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+        addViews()
+        
         layoutBackgroundImageView()
+        
         layoutCloseButton(withSize: 22)
         layoutUpperButtonStackView(withSize: 26)
+        
         layoutLowerButtonStackView()
         layoutButtonLabels()
         layoutSeparatorView()
+        
         layoutProfileInfo()
     }
-    
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        roundProfileImageCorner()
+    }
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    private func layoutBackgroundImageView() {
+
+    private func addViews() {
         view.addSubview(backgroundImageView)
+        
+        view.addSubview(closeButton)
+        view.addSubview(upperButtonStackView)
+        
+        view.addSubview(lowerButtonStackView)
+        
+        view.addSubview(messageLabel)
+        view.addSubview(phoneLabel)
+        view.addSubview(quoteLabel)
+        
+        view.addSubview(separatorView)
+    
+        view.addSubview(profileNameLabel)
+        view.addSubview(profileImageView)
+    }
+
+    private func layoutBackgroundImageView() {
         view.sendSubviewToBack(backgroundImageView)
         
         backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -156,8 +180,6 @@ class ProfileViewController: UIViewController {
     }
     
     private func layoutCloseButton(withSize size: CGFloat) {
-        view.addSubview(closeButton)
-        
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.widthAnchor.constraint(equalToConstant: size).isActive = true
         closeButton.heightAnchor.constraint(equalToConstant: size).isActive = true
@@ -166,8 +188,6 @@ class ProfileViewController: UIViewController {
     }
 
     private func layoutUpperButtonStackView(withSize size: CGFloat) {
-        view.addSubview(upperButtonStackView)
-        
         upperButtonStackView.translatesAutoresizingMaskIntoConstraints = false
         upperButtonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         upperButtonStackView.centerYAnchor.constraint(equalTo: closeButton.centerYAnchor).isActive = true
@@ -180,8 +200,6 @@ class ProfileViewController: UIViewController {
     }
     
     private func layoutLowerButtonStackView() {
-        view.addSubview(lowerButtonStackView)
-
         let safeArea = view.safeAreaLayoutGuide
         lowerButtonStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
         lowerButtonStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -50).isActive = true
@@ -194,10 +212,6 @@ class ProfileViewController: UIViewController {
     }
     
     private func layoutButtonLabels() {
-        view.addSubview(messageLabel)
-        view.addSubview(phoneLabel)
-        view.addSubview(quoteLabel)
-        
         let labelButtonPairs: [(UILabel, UIButton)] = [(messageLabel, messageButton),
                                                          (phoneLabel, phoneButton),
                                                          (quoteLabel, quoteButton)]
@@ -211,8 +225,6 @@ class ProfileViewController: UIViewController {
     }
     
     private func layoutSeparatorView() {
-        view.addSubview(separatorView)
-        
         separatorView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         separatorView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -221,9 +233,6 @@ class ProfileViewController: UIViewController {
     }
     
     private func layoutProfileInfo() {
-        view.addSubview(profileNameLabel)
-        view.addSubview(profileImageView)
-        
         let safeArea = view.safeAreaLayoutGuide
         profileNameLabel.translatesAutoresizingMaskIntoConstraints = false
         profileNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -234,7 +243,9 @@ class ProfileViewController: UIViewController {
         profileImageView.bottomAnchor.constraint(equalTo: profileNameLabel.topAnchor, constant: -5).isActive = true
         profileImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.25).isActive = true
         profileImageView.heightAnchor.constraint(equalTo: profileImageView.widthAnchor).isActive = true
-        
+    }
+    
+    private func roundProfileImageCorner() {
         profileImageView.layer.cornerRadius = profileImageView.bounds.width * 0.3
         profileImageView.clipsToBounds = true
     }
